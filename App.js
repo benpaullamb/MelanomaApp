@@ -1,30 +1,34 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
-import MoleListItem from './src/components/MoleListItem';
+import 'react-native-gesture-handler';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
+import MoleListScreen from './src/screens/MoleListScreen';
+import MoleDetailScreen from './src/screens/MoleDetailScreen';
+
+const AppNavigator = createStackNavigator({
+	MoleList: {
+		screen: MoleListScreen,
+		navigationOptions: {
+			title: 'My Moles: Right Leg'
+		}
+	},
+
+	MoleDetail: {
+		screen: MoleDetailScreen,
+		navigationOptions: {
+			title: 'My Mole: Mole 1'
+		}
+	}
+}, {
+	initialRouteName: 'MoleList'
+});
+
+const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends Component {
 
 	render() {
-		return (
-			<View style={style.container}>
-				<Text style={style.count}>3 moles</Text>
-				<ScrollView>
-					<MoleListItem />
-					<MoleListItem />
-					<MoleListItem />
-				</ScrollView>
-			</View>
-		);
+		return <AppContainer />;
 	}
 }
-
-const style = StyleSheet.create({
-	container: {
-		padding: 16
-	},
-
-	count: {
-		marginBottom: 16,
-		fontSize: 14
-	}
-});

@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
+import { View, StyleSheet, Image, Text, TouchableNativeFeedback } from 'react-native';
+import { withNavigation } from 'react-navigation';
 
-export default class MoleListItem extends Component {
+class MoleListItem extends Component {
 
     render() {
         return (
-            <View style={style.container}>
-                <Image source={require('../images/cartoon-mole.jpg')} style={style.image} />
-                <View style={style.infoSection}>
-                    <Text style={style.mainText}>Precise location: right of the knee</Text>
-                    <Text style={style.secondaryText}>No. images: 2</Text>
-                    <Text style={style.secondaryText}>Latest image: 22/02/2020</Text>
+            <TouchableNativeFeedback onPress={() => this.viewDetailScreen()}>
+                <View style={style.container}>
+                    <Image source={require('../images/cartoon-mole.jpg')} style={style.image} />
+
+                    <View style={style.infoSection}>
+                        <Text style={style.mainText}>Mole 1</Text>
+                        <Text style={style.secondaryText}>Precise location: right of the knee</Text>
+                        <Text style={style.secondaryText}>Latest image: 22/02/2020</Text>
+                    </View>
+
+                    <Text style={style.metaText}>15%</Text>
                 </View>
-                <Text style={style.metaText}>15%</Text>
-            </View>
+            </TouchableNativeFeedback>
         );
+    }
+
+    viewDetailScreen() {
+        this.props.navigation.navigate('MoleDetail');
     }
 }
 
@@ -50,3 +59,5 @@ const style = StyleSheet.create({
         color: 'green'
     }
 });
+
+export default withNavigation(MoleListItem);
