@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, Dimensions, Image } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import ImagePicker from 'react-native-image-picker';
 import BetterButton from '../components/BetterButton';
 
 export default class CaptureScreen extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            picUri: null
-        };
-    }
 
     render() {
         return (
@@ -19,8 +12,8 @@ export default class CaptureScreen extends Component {
                 <View style={style.camContainer}>
                     <RNCamera
                         style={{
-                            width: 50, // this.getCameraDimensions().width,
-                            height: 50 // this.getCameraDimensions().height
+                            width: this.getCameraDimensions().width,
+                            height: this.getCameraDimensions().height
                         }}
                         ref={ref => {
                             this.camera = ref;
@@ -34,12 +27,11 @@ export default class CaptureScreen extends Component {
                         captureAudio={false}
                     />
                 </View>
+
                 <View>
                     <BetterButton title="Capture" onPress={() => this.capturePicture()} style={style.button} />
-                    <BetterButton title="Upload from gallery" style={style.buttonBottom} />
+                    <BetterButton title="Upload from gallery" onPress={() => this.uploadFromGallery()} style={style.buttonBottom} />
                 </View>
-
-                <Image source={{ uri: this.state.picUri }} style={style.result} />
             </View>
         );
     }
@@ -49,8 +41,21 @@ export default class CaptureScreen extends Component {
 
         const data = await this.camera.takePictureAsync();
         console.log('Picture taken', data);
-        this.setState({
+
+        this.props.navigation.navigate('Analysis', {
             picUri: data.uri
+        });
+    }
+
+    async uploadFromGallery() {
+        ImagePicker.showImagePicker({
+            takePhotoButtonTitle: null,
+            mediaType: 'photo'
+
+        }, res => {
+            if (res.didCancel || res.error) return;
+
+            this.props.navigation.navigate('Analysis', { picUri: res.uri });
         });
     }
 
@@ -81,10 +86,5 @@ const style = StyleSheet.create({
 
     buttonBottom: {
         marginBottom: 16
-    },
-
-    result: {
-        width: 300,
-        height: 300
     }
 });
