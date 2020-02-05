@@ -20,11 +20,17 @@ export default class BetterPicker extends Component {
             <View style={[style.group, this.props.style]}>
                 <Text style={style.label}>{this.props.label}</Text>
 
-                <Picker selectedValue={this.state.pickedItem} mode="dropdown" onValueChange={value => this.setState({ pickedItem: value })}>
+                <Picker selectedValue={this.state.pickedItem} mode="dropdown" onValueChange={value => this.onValueChange(value)}>
                     {items}
                 </Picker>
             </View>
         );
+    }
+
+    onValueChange(value) {
+        this.setState({ pickedItem: value });
+
+        if (this.props.onValueChange) this.props.onValueChange(value);
     }
 }
 

@@ -5,25 +5,31 @@ import { withNavigation } from 'react-navigation';
 class MoleListItem extends Component {
 
     render() {
+        const mostRecentImage = this.props.mole.images[this.props.mole.images.length - 1];
+
         return (
             <TouchableNativeFeedback onPress={() => this.viewDetailScreen()}>
                 <View style={style.container}>
-                    <Image source={require('../images/cartoon-mole.jpg')} style={style.image} />
+                    <Image source={{ uri: mostRecentImage.uri }} style={style.image} />
 
                     <View style={style.infoSection}>
-                        <Text style={style.mainText}>Mole 1</Text>
-                        <Text style={style.secondaryText}>Precise location: right of the knee</Text>
-                        <Text style={style.secondaryText}>Latest image: 22/02/2020</Text>
+                        <Text style={style.mainText}>{this.props.mole.id}</Text>
+                        <Text style={style.secondaryText}>Location: {this.props.mole.location}</Text>
+                        <Text style={style.secondaryText}>Latest image: {mostRecentImage.date}</Text>
                     </View>
 
-                    <Text style={style.metaText}>15%</Text>
+                    <Text style={style.metaText}>{this.toPercentage(mostRecentImage.aiPrediction)}</Text>
                 </View>
             </TouchableNativeFeedback>
         );
     }
 
     viewDetailScreen() {
-        this.props.navigation.navigate('MoleDetail');
+        this.props.navigation.navigate('MoleDetail', { mole: this.props.mole });
+    }
+
+    toPercentage(decimal) {
+        return `${(decimal * 100).toFixed(2)}%`
     }
 }
 

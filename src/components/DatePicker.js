@@ -39,10 +39,14 @@ export default class DatePicker extends Component {
     }
 
     setDate(date) {
+        const formattedDate = moment(date).format('DD/MM/YYYY');
+
         this.setState({
-            date: moment(date).format('DD/MM/YYYY'),
+            date: formattedDate,
             showCalendar: false
         });
+
+        if (this.props.onDateChange) this.props.onDateChange(formattedDate);
     }
 }
 

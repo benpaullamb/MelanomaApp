@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
+import ImagePicker from 'react-native-image-picker';
 import BetterButton from '../components/BetterButton';
 
 export default class MoleDetailScreen extends Component {
 
     render() {
+        const mole = this.props.navigation.getParam('mole');
+        const mostRecentImage = mole.images[mole.images.length - 1];
+
         return (
             <View style={style.container}>
-                <Image source={require('../images/cartoon-mole.jpg')} style={style.image} />
+                <Image source={{ uri: mostRecentImage.uri }} style={style.image} />
 
                 <View style={style.infoSection}>
-                    <Text style={style.title}>Mole 1</Text>
-                    <Text style={style.info}>Precise location: Right of the knee</Text>
-                    <Text style={style.info}>Latest image: 22/02/2020</Text>
-                    <Text style={style.info}>Latest risk score: 15%</Text>
-                    <Text style={style.info}>No. images: 2</Text>
+                    <Text style={style.title}>{mole.id}</Text>
+                    <Text style={style.info}>Location: {mole.location}</Text>
+                    <Text style={style.info}>Latest image: {mostRecentImage.date}</Text>
+                    <Text style={style.info}>Latest risk score: {this.toPercentage(mostRecentImage.aiPrediction)}</Text>
+                    <Text style={style.info}>No. images: {mole.images.length}</Text>
                 </View>
 
                 <View style={style.buttons}>
@@ -28,12 +33,30 @@ export default class MoleDetailScreen extends Component {
         );
     }
 
-    deleteMole() {
+    toPercentage(decimal) {
+        return `${(decimal * 100).toFixed(2)}%`
+    }
 
+    async deleteMole() {
+        try {
+            const mole = this.props.navigation.getParam('mole');
+            await AsyncStorage.removeItem(mole.id);
+            this.props.navigation.navigate('MoleList');
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     analyseNewImage() {
+        ImagePicker.showImagePicker({
+            mediaType: 'photo'
+        }, res => {
+            if (res.didCancel || res.error) return;
 
+            const mole = this.props.navigation.getParam('mole');
+
+            this.props.navigation.navigate('Analysis', { picUri: res.uri, mole });
+        });
     }
 
     saveInfo() {
