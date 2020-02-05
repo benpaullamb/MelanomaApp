@@ -5,9 +5,9 @@ export default class InputGroup extends Component {
 
     render() {
         return (
-            <View style={[style.inputGroup, this.props.style]}>
-                <Text style={style.inputLabel}>{this.props.label}</Text>
-                <TextInput onChangeText={text => this.onChangeText(text)} placeholder={this.props.placeholder} style={style.input} />
+            <View style={[style.group, this.props.style]}>
+                <Text style={style.label}>{this.props.label}</Text>
+                <TextInput onChangeText={text => this.onChangeText(text)} placeholder={this.props.placeholder} placeholderTextColor="lightgray" style={style.input} />
             </View>
         );
     }
@@ -18,16 +18,13 @@ export default class InputGroup extends Component {
 }
 
 const style = StyleSheet.create({
-    inputGroup: {
+    group: {
         paddingHorizontal: 12,
         paddingVertical: 8,
-        borderTopLeftRadius: 4,
-        borderTopRightRadius: 4,
-        borderBottomWidth: 1,
-        backgroundColor: 'lightgray'
+        borderBottomWidth: 1
     },
 
-    inputLabel: {
+    label: {
         fontSize: 12
     },
 

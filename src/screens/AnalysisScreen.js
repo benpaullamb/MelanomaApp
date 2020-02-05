@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, Image, Picker, PermissionsAndroid } from 'react-native';
+import { View, StyleSheet, Text, Image, PermissionsAndroid } from 'react-native';
 import CameraRoll from '@react-native-community/cameraroll';
 import BetterButton from '../components/BetterButton';
 import InputGroup from '../components/InputGroup';
+import DatePicker from '../components/DatePicker';
+import BetterPicker from '../components/Picker';
 
 export default class AnalysisScreen extends Component {
 
@@ -10,7 +12,7 @@ export default class AnalysisScreen extends Component {
         super(props);
         this.state = {
             pic: this.props.navigation.getParam('picUri'),
-            bodyParts: ['Head', 'Front Torso', 'Back', 'Right Arm', 'Left Arm', 'Right Leg', 'Left Leg']
+            bodyParts: ['Back', 'Front Torso', 'Right Arm', 'Left Arm', 'Right Leg', 'Left Leg', 'Head']
         };
     }
 
@@ -22,18 +24,14 @@ export default class AnalysisScreen extends Component {
     }
 
     render() {
-        const bodyPartItems = this.state.bodyParts.map(bodyPart => {
-            return <Picker.Item label={bodyPart} value={bodyPart} key={bodyPart} />;
-        });
-
         return (
             <View style={style.container}>
                 <Image source={{ uri: this.state.pic }} style={style.image} />
 
                 <View style={style.group}>
                     <Text style={style.colTitle}>AI Prediction</Text>
-                    <Text style={style.infoText}>Benign: 78%</Text>
-                    <Text style={style.infoText}>Melanoma: 22%</Text>
+                    <Text style={style.goodResult}>Benign: 78%</Text>
+                    <Text>Melanoma: 22%</Text>
                 </View>
 
                 <View style={style.group}>
@@ -41,11 +39,9 @@ export default class AnalysisScreen extends Component {
 
                     <InputGroup label="ID" placeholder="Shoulder mole 1" style={style.inputGroup} />
 
-                    <Picker selectedValue={this.state.bodyParts[0]}>
-                        {bodyPartItems}
-                    </Picker>
+                    <DatePicker label="Date" style={style.inputGroup} />
 
-                    <InputGroup label="Date" />
+                    <BetterPicker items={this.state.bodyParts} label="Location" />
                 </View>
 
                 <View style={style.buttons}>
@@ -56,6 +52,7 @@ export default class AnalysisScreen extends Component {
     }
 
     async savePicture() {
+        if (!this.state.pic) return;
         try {
             const res = await CameraRoll.save(this.state.pic, {
                 type: 'photo',
@@ -98,6 +95,12 @@ const style = StyleSheet.create({
         width: null,
         height: 200,
         marginBottom: 16
+    },
+
+    goodResult: {
+        marginBottom: 4,
+        color: 'green',
+        fontWeight: 'bold'
     },
 
     group: {
