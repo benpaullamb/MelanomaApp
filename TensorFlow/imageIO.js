@@ -3,24 +3,26 @@ const tfn = require('@tensorflow/tfjs-node');
 const fs = require('fs');
 const path = require('path');
 
-async function loadImages(dir, maxImages) {
+async function loadImages(dir, imageSize, maxImages) {
     console.time('Load Images Duration');
 
     const imageTensors = await getImageTensorsFromDir(dir, maxImages);
 
     console.log('Resizing images');
-    const resizedImages = resizeImages(imageTensors, 500);
+    const resizedImages = resizeImages(imageTensors, imageSize);
+    imageTensors.forEach(t => t.dispose());
     // console.log(`New shape: ${resizedImages[0].shape}`);
 
     console.log('Batching tensors');
-    const tensor = batchTensors(resizedImages);
+    const batchedTensor = batchTensors(resizedImages);
+    resizedImages.forEach(t => t.dispose());
     // console.log(`Batched tensor: ${tensor.shape}`);
 
-    console.log('Managing memory');
-    resizedImages.forEach(t => t.dispose());
-    imageTensors.forEach(t => t.dispose());
-    // console.log(`Number of tensors in memory: ${tf.memory().numTensors}`);
+    console.log('Normalising image data');
+    const tensor = normaliseImages(batchedTensor);
+    batchedTensor.dispose();
 
+    console.log(`Number of tensors in memory: ${tf.memory().numTensors}`);
     console.timeEnd('Load Images Duration');
 
     return tensor;
@@ -40,13 +42,17 @@ function saveTensorAsImages(tensor, dir) {
     });
 }
 
+function normaliseImages(tensor) {
+    return tf.div(tensor, tf.scalar(255));
+}
+
 function batchTensors(tensors) {
     return tf.concat(tensors);
 }
 
 function resizeImages(tensors, size) {
-    cropSize = [size, size];
-    boxInd = [0];
+    const cropSize = [size, size];
+    const boxInd = [0];
 
     tensors4d = tensors.map(tensor => tf.expandDims(tensor));
 
@@ -157,7 +163,7 @@ async function getImageTensor(path) {
 
             try {
                 const imageTensor = tfn.node.decodeJpeg(imageBuffer, 3);
-                console.log(`Decoded: ${path}`);
+                // console.log(`Decoded: ${path}`);
                 return res(imageTensor);
             } catch (err) {
                 return rej(err);
