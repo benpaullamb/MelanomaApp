@@ -3,27 +3,48 @@ const tfn = require('@tensorflow/tfjs-node');
 const fs = require('fs');
 const path = require('path');
 
-async function loadImages(dir, imageSize, maxImages) {
+async function loadImages(dir, imageSize, startIndex, endIndex) {
     console.time('Load Images Duration');
+    console.log('--------------------------------');
+    console.log(`Loading images from ${dir}`);
 
-    const imageTensors = await getImageTensorsFromDir(dir, maxImages);
+    const imageTensors = await getImageTensorsFromDir(dir, startIndex, endIndex);
+    console.log(`Number of tensors in memory: ${tf.memory().numTensors}`);
 
     console.log('Resizing images');
     const resizedImages = resizeImages(imageTensors, imageSize);
     imageTensors.forEach(t => t.dispose());
-    // console.log(`New shape: ${resizedImages[0].shape}`);
+    console.log(`Number of tensors in memory: ${tf.memory().numTensors}`);
 
     console.log('Batching tensors');
     const batchedTensor = batchTensors(resizedImages);
     resizedImages.forEach(t => t.dispose());
-    // console.log(`Batched tensor: ${tensor.shape}`);
+    console.log(`Number of tensors in memory: ${tf.memory().numTensors}`);
 
     console.log('Normalising image data');
     const tensor = normaliseImages(batchedTensor);
     batchedTensor.dispose();
+    console.log(tensor.shape);
 
     console.log(`Number of tensors in memory: ${tf.memory().numTensors}`);
     console.timeEnd('Load Images Duration');
+
+    return tensor;
+}
+
+async function loadImage(path, size) {
+    console.log(`Loading Single Image ${path}`);
+
+    const imageTensor = await getImageTensor(path);
+
+    console.log('Resizing images');
+    const resizedImage = resizeImages([imageTensor], size)[0];
+    imageTensor.dispose();
+
+    console.log('Normalising image data');
+    const tensor = normaliseImages(resizedImage);
+    resizedImage.dispose();
+    console.log(tensor.shape);
 
     return tensor;
 }
@@ -85,10 +106,10 @@ function resizeImages(tensors, size) {
     return resizedImages;
 }
 
-async function printImagesSummary(dir, maxImages) {
+async function printImagesSummary(dir, startIndex, endIndex) {
     console.time('Print Images Summary Duration');
 
-    const tensors = await getImageTensorsFromDir(dir, maxImages);
+    const tensors = await getImageTensorsFromDir(dir, startIndex, endIndex);
 
     console.log('--------------------------------');
     console.log(`Images Summary`);
@@ -138,9 +159,9 @@ async function printImagesSummary(dir, maxImages) {
     console.log('--------------------------------');
 }
 
-async function getImageTensorsFromDir(dir, maxImages) {
+async function getImageTensorsFromDir(dir, startIndex, endIndex) {
     console.log('Reading filenames');
-    const imageNames = await getImageNames(dir, maxImages);
+    const imageNames = await getImageNames(dir, startIndex, endIndex);
     console.log(`${imageNames.length} images found`);
 
     console.log('Reading image data into tensors');
@@ -172,9 +193,14 @@ async function getImageTensor(path) {
     });
 }
 
-async function getImageNames(path, max) {
+async function getImageCount(dir) {
+    const imageNames = await getImageNames(dir);
+    return imageNames.length;
+}
+
+async function getImageNames(dir, startIndex, endIndex) {
     const res = await new Promise((res, rej) => {
-        fs.readdir(path, (err, imageNames) => {
+        fs.readdir(dir, (err, imageNames) => {
 
             if (err) return rej(err);
 
@@ -182,12 +208,13 @@ async function getImageNames(path, max) {
         });
     });
 
-    if (max) res.length = max;
-    return res;
+    return res.slice(startIndex, endIndex);
 }
 
 module.exports = {
     loadImages,
     printImagesSummary,
-    saveTensorAsImages
+    saveTensorAsImages,
+    getImageCount,
+    loadImage
 };

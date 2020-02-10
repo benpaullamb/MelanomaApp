@@ -10,7 +10,8 @@ function getLeNet5Model(inputShape) {
         strides: 1,
         activation: 'relu',
         inputShape,
-        dtype: 'float32'
+        dtype: 'float32',
+        kernelInitializer: 'varianceScaling'
     }));
 
     model.add(tf.layers.averagePooling2d({
@@ -21,7 +22,8 @@ function getLeNet5Model(inputShape) {
         filters: 16,
         kernelSize: 5,
         strides: 1,
-        activation: 'relu'
+        activation: 'relu',
+        kernelInitializer: 'varianceScaling'
     }));
 
     model.add(tf.layers.averagePooling2d({
@@ -32,24 +34,25 @@ function getLeNet5Model(inputShape) {
 
     model.add(tf.layers.dense({
         units: 120,
-        activation: 'relu'
+        activation: 'relu',
+        kernelInitializer: 'varianceScaling'
     }));
+
+    model.add(tf.layers.dropout({ rate: 0.5 }));
 
     model.add(tf.layers.dense({
         units: 84,
-        activation: 'relu'
+        activation: 'relu',
+        kernelInitializer: 'varianceScaling'
     }));
+
+    model.add(tf.layers.dropout({ rate: 0.5 }));
 
     model.add(tf.layers.dense({
         units: 2,
-        activation: 'softmax'
+        activation: 'softmax',
+        kernelInitializer: 'varianceScaling'
     }));
-
-    model.compile({
-        loss: 'categoricalCrossentropy',
-        optimizer: 'sgd',
-        metrics: ['accuracy']
-    });
 
     return model;
 }

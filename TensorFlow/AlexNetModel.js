@@ -67,21 +67,19 @@ function getAlexNetModel(inputShape) {
         activation: 'relu'
     }));
 
+    model.add(tf.layers.dropout({ rate: 0.5 }));
+
     model.add(tf.layers.dense({
         units: 4096,
         activation: 'relu'
     }));
 
+    model.add(tf.layers.dropout({ rate: 0.5 }));
+
     model.add(tf.layers.dense({
         units: 2,
         activation: 'softmax'
     }));
-
-    model.compile({
-        loss: 'categoricalCrossentropy',
-        optimizer: 'sgd',
-        metrics: ['accuracy']
-    });
 
     return model;
 }
