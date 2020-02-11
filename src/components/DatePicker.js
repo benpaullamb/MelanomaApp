@@ -29,7 +29,7 @@ export default class DatePicker extends Component {
                     <DateTimePicker mode="date" display="calendar" value={new Date()} onChange={(e, date) => this.setDate(date)} />
                 }
 
-                <Text style={style.label}>{this.props.label}</Text>
+                <Text style={style.label}>{this.props.label}{this.props.required ? '*' : ''}</Text>
 
                 <TouchableNativeFeedback onPress={() => this.setState({ showCalendar: true })}>
                     {result}

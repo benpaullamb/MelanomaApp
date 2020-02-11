@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, Image, PermissionsAndroid } from 'react-native';
+import { View, StyleSheet, Text, Image, PermissionsAndroid, ToastAndroid } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import BetterButton from '../components/BetterButton';
 import InputGroup from '../components/InputGroup';
@@ -52,11 +52,13 @@ export default class AnalysisScreen extends Component {
                 <View style={style.group}>
                     <Text style={style.colTitle}>Details</Text>
 
-                    <InputGroup label="ID" placeholder="Upper back mole 1" onChangeText={text => this.setState({ id: text })} style={style.inputGroup} />
+                    <InputGroup text={this.state.id} onChangeText={text => this.setState({ id: text })}
+                        label="ID" required={true} placeholder="Upper back mole 1" style={style.inputGroup} />
 
-                    <DatePicker label="Date" onDateChange={date => this.setState({ date })} style={style.inputGroup} />
+                    <DatePicker label="Date" required={true} onDateChange={date => this.setState({ date })} style={style.inputGroup} />
 
-                    <BetterPicker label="Location" items={this.bodyParts} onValueChange={value => this.setState({ location: value })} />
+                    <BetterPicker items={this.bodyParts} pickedItem={this.state.location} onValueChange={value => this.setState({ location: value })}
+                        label="Location" required={true} />
                 </View>
 
                 <View style={style.buttons}>
@@ -67,7 +69,10 @@ export default class AnalysisScreen extends Component {
     }
 
     async saveData() {
-        if (!this.state.id || !this.state.location || !this.state.date) return console.log('Missing inputs');
+        if (!this.state.id || !this.state.location || !this.state.date) {
+            ToastAndroid.show('The ID, date, and location fields are required.', ToastAndroid.LONG);
+            return;
+        }
 
         try {
             const mole = {
@@ -82,9 +87,15 @@ export default class AnalysisScreen extends Component {
                 ]
             };
 
-            console.log(JSON.stringify(mole));
-
-            await AsyncStorage.setItem(mole.id, JSON.stringify(mole));
+            const existingMoleJSON = await AsyncStorage.getItem(mole.id);
+            console.log(existingMoleJSON);
+            if (existingMoleJSON) {
+                const existingMole = JSON.parse(existingMoleJSON);
+                existingMole.images.push(mole.images[0]);
+                await AsyncStorage.setItem(existingMole.id, JSON.stringify(existingMole));
+            } else {
+                await AsyncStorage.setItem(mole.id, JSON.stringify(mole));
+            }
 
             this.props.navigation.navigate('MoleList');
 

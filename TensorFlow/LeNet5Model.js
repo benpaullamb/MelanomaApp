@@ -11,7 +11,8 @@ function getLeNet5Model(inputShape) {
         activation: 'relu',
         inputShape,
         dtype: 'float32',
-        kernelInitializer: 'varianceScaling'
+        kernelInitializer: 'varianceScaling',
+        kernelRegularizer: tf.regularizers.l2({ l2: 0.001 })
     }));
 
     model.add(tf.layers.averagePooling2d({
@@ -23,7 +24,8 @@ function getLeNet5Model(inputShape) {
         kernelSize: 5,
         strides: 1,
         activation: 'relu',
-        kernelInitializer: 'varianceScaling'
+        kernelInitializer: 'varianceScaling',
+        kernelRegularizer: tf.regularizers.l2({ l2: 0.001 })
     }));
 
     model.add(tf.layers.averagePooling2d({
@@ -35,7 +37,8 @@ function getLeNet5Model(inputShape) {
     model.add(tf.layers.dense({
         units: 120,
         activation: 'relu',
-        kernelInitializer: 'varianceScaling'
+        kernelInitializer: 'varianceScaling',
+        kernelRegularizer: tf.regularizers.l2({ l2: 0.001 })
     }));
 
     model.add(tf.layers.dropout({ rate: 0.5 }));
@@ -43,7 +46,8 @@ function getLeNet5Model(inputShape) {
     model.add(tf.layers.dense({
         units: 84,
         activation: 'relu',
-        kernelInitializer: 'varianceScaling'
+        kernelInitializer: 'varianceScaling',
+        kernelRegularizer: tf.regularizers.l2({ l2: 0.001 })
     }));
 
     model.add(tf.layers.dropout({ rate: 0.5 }));

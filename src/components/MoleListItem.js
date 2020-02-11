@@ -14,8 +14,8 @@ class MoleListItem extends Component {
 
                     <View style={style.infoSection}>
                         <Text style={style.mainText}>{this.props.mole.id}</Text>
-                        <Text style={style.secondaryText}>Location: {this.props.mole.location}</Text>
                         <Text style={style.secondaryText}>Latest image: {mostRecentImage.date}</Text>
+                        <Text style={style.secondaryText}>No. images: {this.props.mole.images.length}</Text>
                     </View>
 
                     <Text style={style.metaText}>{this.toPercentage(mostRecentImage.aiPrediction)}</Text>

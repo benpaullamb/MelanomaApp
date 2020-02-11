@@ -5,9 +5,8 @@ export default class BetterPicker extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
-            pickedItem: this.props.items[0]
+            pickedItem: this.props.pickedItem || this.props.items[0]
         };
     }
 
@@ -18,9 +17,9 @@ export default class BetterPicker extends Component {
 
         return (
             <View style={[style.group, this.props.style]}>
-                <Text style={style.label}>{this.props.label}</Text>
+                <Text style={style.label}>{this.props.label}{this.props.required ? '*' : ''}</Text>
 
-                <Picker selectedValue={this.state.pickedItem} mode="dropdown" onValueChange={value => this.onValueChange(value)}>
+                <Picker selectedValue={this.state.pickedItem} onValueChange={value => this.onValueChange(value)} mode="dropdown">
                     {items}
                 </Picker>
             </View>
@@ -29,7 +28,6 @@ export default class BetterPicker extends Component {
 
     onValueChange(value) {
         this.setState({ pickedItem: value });
-
         if (this.props.onValueChange) this.props.onValueChange(value);
     }
 }

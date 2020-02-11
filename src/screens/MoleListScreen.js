@@ -10,11 +10,14 @@ export default class MoleListScreen extends Component {
     constructor(props) {
         super(props);
 
+        this.bodyParts = ['Back', 'Front Torso', 'Right Arm', 'Left Arm', 'Right Leg', 'Left Leg', 'Head']
+
         this.state = {
-            moles: []
+            loadedMoles: [],
+            location: this.bodyParts[0]
         };
 
-        this.bodyParts = ['Back', 'Front Torso', 'Right Arm', 'Left Arm', 'Right Leg', 'Left Leg', 'Head']
+        this.loadData();
     }
 
     componentDidMount() {
@@ -43,7 +46,7 @@ export default class MoleListScreen extends Component {
 
             const moles = keyValues.map(keyValue => JSON.parse(keyValue[1]));
             this.setState({
-                moles
+                loadedMoles: moles
             });
         } catch (err) {
 
@@ -52,25 +55,34 @@ export default class MoleListScreen extends Component {
 
     render() {
         const bodyPartItems = this.bodyParts.map(bodyPart => {
-            return <Picker.Item label={bodyPart} value={bodyPart} key={bodyPart} />
+            let count = 0;
+            this.state.loadedMoles.forEach(mole => {
+                if (mole.location === bodyPart) count++;
+            });
+            return <Picker.Item label={`${bodyPart} (${count})`} value={bodyPart} key={bodyPart} />
         });
 
         return (
             <View style={style.container}>
-                <Picker mode="dropdown" style={style.picker}>
+                <Picker selectedValue={this.state.location} onValueChange={value => this.setState({ location: value })}
+                    mode="dropdown" style={style.picker}>
                     {bodyPartItems}
                 </Picker>
 
                 <View style={style.top}>
-                    <Text style={style.count}>{this.state.moles.length} moles</Text>
+                    <Text style={style.count}>{this.state.loadedMoles.length} mole{this.state.loadedMoles.length === 1 ? '' : 's'} total</Text>
                     <BetterButton title="New Image" onPress={() => this.addNewImage()} />
                 </View>
 
                 <ScrollView>
-                    {this.state.moles.map(mole => <MoleListItem mole={mole} key={mole.id} />)}
+                    {this.getFilteredMoles().map(mole => <MoleListItem mole={mole} key={mole.id} />)}
                 </ScrollView>
             </View>
         );
+    }
+
+    getFilteredMoles() {
+        return this.state.loadedMoles.filter(mole => mole.location === this.state.location);
     }
 
     addNewImage() {

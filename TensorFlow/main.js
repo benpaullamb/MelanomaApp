@@ -122,4 +122,4 @@ function getLabel(prediction) {
     return dist[0] > dist[1] ? 'Cat' : 'Dog';
 }
 
-// start();
+start();
