@@ -3,7 +3,9 @@ import { View, StyleSheet, TouchableNativeFeedback, Text } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import moment from 'moment';
 
-export default class DatePicker extends Component {
+import MatInput from './MatInput';
+
+export default class MatDatePicker extends Component {
 
     constructor(props) {
         super(props);
@@ -17,24 +19,22 @@ export default class DatePicker extends Component {
     render() {
         let result;
         if (this.state.date) {
-            result = <Text style={style.result}>{this.state.date}</Text>;
+            result = <Text style={style.date}>{this.state.date}</Text>;
         } else {
             result = <Text style={style.placeholder}>Select a date</Text>;
         }
 
         return (
-            <View style={[style.group, this.props.style]}>
+            <MatInput label={this.props.label} required={this.props.required} style={this.props.style} labelStyle={style.label}>
                 {
                     this.state.showCalendar &&
                     <DateTimePicker mode="date" display="calendar" value={new Date()} onChange={(e, date) => this.setDate(date)} />
                 }
 
-                <Text style={style.label}>{this.props.label}{this.props.required ? '*' : ''}</Text>
-
                 <TouchableNativeFeedback onPress={() => this.setState({ showCalendar: true })}>
                     {result}
                 </TouchableNativeFeedback>
-            </View>
+            </MatInput>
         );
     }
 
@@ -51,18 +51,12 @@ export default class DatePicker extends Component {
 }
 
 const style = StyleSheet.create({
-    group: {
-        paddingHorizontal: 12,
-        paddingVertical: 8,
-        borderBottomWidth: 1
-    },
-
     label: {
         fontSize: 12,
         marginBottom: 4
     },
 
-    result: {
+    date: {
         fontSize: 16
     },
 

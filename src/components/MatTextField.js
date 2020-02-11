@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, TextInput } from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 
-export default class InputGroup extends Component {
+import MatInput from './MatInput';
+
+export default class MatTextField extends Component {
 
     constructor(props) {
         super(props);
@@ -12,33 +14,21 @@ export default class InputGroup extends Component {
 
     render() {
         return (
-            <View style={[style.group, this.props.style]}>
-                <Text style={style.label}>{this.props.label}{this.props.required ? '*' : ''}</Text>
+            <MatInput label={this.props.label} required={this.props.required} style={this.props.style}>
                 <TextInput value={this.state.text} onChangeText={text => this.onChangeText(text)}
                     placeholder={this.props.placeholder} placeholderTextColor="lightgray" style={style.input} />
-            </View>
+            </MatInput>
+
         );
     }
 
     onChangeText(text) {
-        this.setState({
-            text
-        });
+        this.setState({ text });
         if (this.props.onChangeText) this.props.onChangeText(text);
     }
 }
 
 const style = StyleSheet.create({
-    group: {
-        paddingHorizontal: 12,
-        paddingVertical: 8,
-        borderBottomWidth: 1
-    },
-
-    label: {
-        fontSize: 12
-    },
-
     input: {
         padding: 0,
         fontSize: 16

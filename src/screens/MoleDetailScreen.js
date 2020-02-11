@@ -2,36 +2,40 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image, ToastAndroid, Alert } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import ImagePicker from 'react-native-image-picker';
-import BetterButton from '../components/BetterButton';
+
+import MatButton from '../components/MatButton';
+import Utils from '../utils';
 
 export default class MoleDetailScreen extends Component {
 
-    render() {
-        const mole = this.props.navigation.getParam('mole');
-        console.log('Loaded mole', mole);
-        const mostRecentImage = mole.images[mole.images.length - 1];
+    constructor(props) {
+        super(props);
 
-        return (
-            <View style={style.container}>
-                <Image source={{ uri: mostRecentImage.uri }} style={style.image} />
-
-                <View style={style.infoSection}>
-                    <Text style={style.title}>{mole.id}</Text>
-                    <Text style={style.info}>Location: {mole.location}</Text>
-                    <Text style={style.info}>Latest image: {mostRecentImage.date}</Text>
-                    <Text style={style.info}>Chance of Melanoma (latest): {this.toPercentage(mostRecentImage.aiPrediction)}</Text>
-                    <Text style={style.info}>No. images: {mole.images.length}</Text>
-                </View>
-
-                <BetterButton title="New Image" onPress={() => this.analyseNewImage()} style={style.button} />
-                <BetterButton title="Compare Over Time" onPress={() => this.compareOverTime()} style={style.button} />
-                <BetterButton title="Delete" onPress={() => this.requestDelete()} style={style.button} />
-            </View>
-        );
+        this.state = {
+            mole: this.props.navigation.getParam('mole')
+        };
     }
 
-    toPercentage(decimal) {
-        return `${(decimal * 100).toFixed(2)}%`
+    render() {
+        const latestImage = this.state.mole.images[this.state.mole.images.length - 1];
+
+        return (
+            <View style={style.body}>
+                <Image source={{ uri: latestImage.uri }} style={style.moleImage} />
+
+                <View style={style.main}>
+                    <Text style={style.moleId}>{this.state.mole.id}</Text>
+                    <Text style={style.moleInfo}>Chance of Melanoma (latest): {Utils.toPercentage(latestImage.aiPrediction[1])}</Text>
+                    <Text style={style.moleInfo}>Latest image: {latestImage.date}</Text>
+                    <Text style={style.moleInfo}>Location: {this.state.mole.location}</Text>
+                    <Text style={style.moleInfo}>No. images: {this.state.mole.images.length}</Text>
+                </View>
+
+                <MatButton title="New Image" onPress={() => this.analyseNewImage()} style={style.button} />
+                <MatButton title="Compare Over Time" onPress={() => this.compareOverTime()} style={style.button} />
+                <MatButton title="Delete" onPress={() => this.requestDelete()} style={style.button} />
+            </View>
+        );
     }
 
     requestDelete() {
@@ -48,11 +52,10 @@ export default class MoleDetailScreen extends Component {
 
     async deleteMole() {
         try {
-            const mole = this.props.navigation.getParam('mole');
-            await AsyncStorage.removeItem(mole.id);
+            await AsyncStorage.removeItem(this.state.mole.id);
             this.props.navigation.navigate('MoleList');
         } catch (err) {
-            console.log(err);
+            ToastAndroid.show('Error deleting mole', ToastAndroid.SHORT);
         }
     }
 
@@ -62,14 +65,8 @@ export default class MoleDetailScreen extends Component {
         }, res => {
             if (res.didCancel || res.error) return;
 
-            const mole = this.props.navigation.getParam('mole');
-
-            this.props.navigation.navigate('Analysis', { picUri: res.uri, mole });
+            this.props.navigation.navigate('Analysis', { imageUri: res.uri, mole: this.state.mole });
         });
-    }
-
-    saveInfo() {
-
     }
 
     compareOverTime() {
@@ -78,40 +75,30 @@ export default class MoleDetailScreen extends Component {
 }
 
 const style = StyleSheet.create({
-    container: {
+    body: {
         padding: 16
     },
 
-    image: {
+    moleImage: {
         height: 200,
         width: null,
         marginBottom: 16
     },
 
-    infoSection: {
+    main: {
         marginBottom: 16
     },
 
-    title: {
+    moleId: {
         marginBottom: 8,
         fontSize: 20
     },
 
-    info: {
+    moleInfo: {
         fontSize: 16
-    },
-
-    buttons: {
-        marginBottom: 16,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
     },
 
     button: {
         marginBottom: 16
-    },
-
-    lastButton: {
-        flex: 1
     }
 });

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableNativeFeedback } from 'react-native';
 
-export default class BetterButton extends Component {
+export default class MatButton extends Component {
 
     render() {
         return (

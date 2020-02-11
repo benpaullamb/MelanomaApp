@@ -6,7 +6,6 @@ import { createStackNavigator } from 'react-navigation-stack';
 import MoleListScreen from './src/screens/MoleListScreen';
 import MoleDetailScreen from './src/screens/MoleDetailScreen';
 import AnalysisScreen from './src/screens/AnalysisScreen';
-// import CaptureScreen from './src/screens/CaptureScreen';
 
 const AppNavigator = createStackNavigator({
 	MoleList: {
@@ -29,13 +28,6 @@ const AppNavigator = createStackNavigator({
 			title: 'Mole Analysis'
 		}
 	}
-
-	// Capture: {
-	// 	screen: CaptureScreen,
-	// 	navigationOptions: {
-	// 		title: 'Capture a New Image'
-	// 	}
-	// },
 }, {
 	initialRouteName: 'MoleList'
 });

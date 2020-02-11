@@ -2,23 +2,25 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Image, Text, TouchableNativeFeedback } from 'react-native';
 import { withNavigation } from 'react-navigation';
 
+import Utils from '../utils';
+
 class MoleListItem extends Component {
 
     render() {
-        const mostRecentImage = this.props.mole.images[this.props.mole.images.length - 1];
+        const latestImage = this.props.mole.images[this.props.mole.images.length - 1];
 
         return (
             <TouchableNativeFeedback onPress={() => this.viewDetailScreen()}>
                 <View style={style.container}>
-                    <Image source={{ uri: mostRecentImage.uri }} style={style.image} />
+                    <Image source={{ uri: latestImage.uri }} style={style.moleImage} />
 
-                    <View style={style.infoSection}>
-                        <Text style={style.mainText}>{this.props.mole.id}</Text>
-                        <Text style={style.secondaryText}>Latest image: {mostRecentImage.date}</Text>
-                        <Text style={style.secondaryText}>No. images: {this.props.mole.images.length}</Text>
+                    <View style={style.section}>
+                        <Text style={style.moleId}>{this.props.mole.id}</Text>
+                        <Text style={style.moleInfo}>Latest image: {latestImage.date}</Text>
+                        <Text style={style.moleInfo}>No. images: {this.props.mole.images.length}</Text>
                     </View>
 
-                    <Text style={style.metaText}>{this.toPercentage(mostRecentImage.aiPrediction)}</Text>
+                    <Text style={style.moleAI}>{Utils.toPercentage(latestImage.aiPrediction[1])}</Text>
                 </View>
             </TouchableNativeFeedback>
         );
@@ -26,10 +28,6 @@ class MoleListItem extends Component {
 
     viewDetailScreen() {
         this.props.navigation.navigate('MoleDetail', { mole: this.props.mole });
-    }
-
-    toPercentage(decimal) {
-        return `${(decimal * 100).toFixed(2)}%`
     }
 }
 
@@ -41,27 +39,27 @@ const style = StyleSheet.create({
         borderBottomColor: 'lightgray'
     },
 
-    image: {
+    moleImage: {
         width: 64,
         height: 64,
         marginRight: 16
     },
 
-    infoSection: {
+    section: {
         marginRight: 16,
         flexShrink: 1
     },
 
-    mainText: {
+    moleId: {
         fontSize: 16,
     },
 
-    secondaryText: {
+    moleInfo: {
         fontSize: 14,
         color: 'gray',
     },
 
-    metaText: {
+    moleAI: {
         color: 'green'
     }
 });

@@ -1,1 +1,1 @@
-# MelanomaApp
+# Melanoma AI

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image, PermissionsAndroid, ToastAndroid } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import BetterButton from '../components/BetterButton';
-import InputGroup from '../components/InputGroup';
-import DatePicker from '../components/DatePicker';
-import BetterPicker from '../components/BetterPicker';
+
+import MatButton from '../components/MatButton';
+import MatTextField from '../components/MatTextField';
+import MatDatePicker from '../components/MatDatePicker';
+import MatPicker from '../components/MatPicker';
+import Utils from '../utils';
 
 export default class AnalysisScreen extends Component {
 
@@ -14,9 +16,9 @@ export default class AnalysisScreen extends Component {
         this.state = {
             id: null,
             location: 'Back',
-            pic: this.props.navigation.getParam('picUri'),
+            imageUri: this.props.navigation.getParam('imageUri'),
             date: null,
-            aiPrediction: Math.random()
+            aiPrediction: [Math.random(), Math.random()]
         };
 
         const mole = this.props.navigation.getParam('mole');
@@ -27,42 +29,41 @@ export default class AnalysisScreen extends Component {
                 location: mole.location
             };
         }
-
-        this.bodyParts = ['Back', 'Front Torso', 'Right Arm', 'Left Arm', 'Right Leg', 'Left Leg', 'Head']
     }
 
     async componentDidMount() {
         const res = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE);
         if (res !== PermissionsAndroid.RESULTS.GRANTED) {
-            console.log('The save button will not work');
+            ToastAndroid.show('This app requires permission to save images to your phones storage', ToastAndroid.SHORT);
         }
     }
 
     render() {
         return (
-            <View style={style.container}>
-                <Image source={{ uri: this.state.pic }} style={style.image} />
+            <View style={style.body}>
+                <Image source={{ uri: this.state.imageUri }} style={style.moleImage} />
 
-                <View style={style.group}>
-                    <Text style={style.colTitle}>AI Prediction</Text>
-                    <Text style={style.goodResult}>Benign: 78%</Text>
-                    <Text>Melanoma: 22%</Text>
+                <View style={style.section}>
+                    <Text style={style.sectionHeading}>AI Prediction</Text>
+                    <Text style={style.goodAIPrediction}>Benign: {Utils.toPercentage(this.state.aiPrediction[0])}</Text>
+                    <Text>Melanoma: {Utils.toPercentage(this.state.aiPrediction[1])}</Text>
                 </View>
 
-                <View style={style.group}>
-                    <Text style={style.colTitle}>Details</Text>
+                <View style={style.section}>
+                    <Text style={style.sectionHeading}>Details</Text>
 
-                    <InputGroup text={this.state.id} onChangeText={text => this.setState({ id: text })}
-                        label="ID" required={true} placeholder="Upper back mole 1" style={style.inputGroup} />
+                    <MatTextField label="ID" text={this.state.id} onChangeText={text => this.setState({ id: text })}
+                        required={true} placeholder="Upper back mole 1" style={style.input} />
 
-                    <DatePicker label="Date" required={true} onDateChange={date => this.setState({ date })} style={style.inputGroup} />
+                    <MatDatePicker label="Date" onDateChange={date => this.setState({ date })}
+                        required={true} style={style.input} />
 
-                    <BetterPicker items={this.bodyParts} pickedItem={this.state.location} onValueChange={value => this.setState({ location: value })}
-                        label="Location" required={true} />
+                    <MatPicker label="Location" items={Utils.bodyParts} pickedItem={this.state.location}
+                        onValueChange={value => this.setState({ location: value })} required={true} />
                 </View>
 
-                <View style={style.buttons}>
-                    <BetterButton title="Save" onPress={() => this.saveData()} />
+                <View style={style.footer}>
+                    <MatButton title="Save" onPress={() => this.saveData()} />
                 </View>
             </View>
         );
@@ -70,29 +71,16 @@ export default class AnalysisScreen extends Component {
 
     async saveData() {
         if (!this.state.id || !this.state.location || !this.state.date) {
-            ToastAndroid.show('The ID, date, and location fields are required.', ToastAndroid.LONG);
-            return;
+            return ToastAndroid.show('The ID, date, and location fields are required.', ToastAndroid.LONG);
         }
 
-        try {
-            const mole = {
-                id: this.state.id,
-                location: this.state.location,
-                images: [
-                    {
-                        uri: this.state.pic,
-                        date: this.state.date,
-                        aiPrediction: this.state.aiPrediction
-                    }
-                ]
-            };
+        const mole = this.createMoleFromState();
 
+        try {
             const existingMoleJSON = await AsyncStorage.getItem(mole.id);
-            console.log(existingMoleJSON);
+
             if (existingMoleJSON) {
-                const existingMole = JSON.parse(existingMoleJSON);
-                existingMole.images.push(mole.images[0]);
-                await AsyncStorage.setItem(existingMole.id, JSON.stringify(existingMole));
+                this.saveToExistingMole(existingMoleJSON, mole);
             } else {
                 await AsyncStorage.setItem(mole.id, JSON.stringify(mole));
             }
@@ -100,78 +88,66 @@ export default class AnalysisScreen extends Component {
             this.props.navigation.navigate('MoleList');
 
         } catch (err) {
-            console.log(err);
+            ToastAndroid.show('Error saving new mole', ToastAndroid.SHORT);
         }
     }
 
-    // async savePicture() {
-    //     if (!this.state.pic) return;
-    //     try {
-    //         // const res = await CameraRoll.save(this.state.pic, {
-    //         //     type: 'photo',
-    //         //     album: 'Melanoma App'
-    //         // });
+    createMoleFromState() {
+        return {
+            id: this.state.id,
+            location: this.state.location,
+            images: [
+                {
+                    uri: this.state.imageUri,
+                    date: this.state.date,
+                    aiPrediction: this.state.aiPrediction
+                }
+            ]
+        };
+    }
 
-    //         const savedImageUri = await CameraRoll.saveToCameraRoll(this.state.pic, 'photo');
-    //         this.saveData(savedImageUri);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // }
-
-    // To be used elsewhere
-    // async getAppPhotos() {
-    //     const res = await CameraRoll.getPhotos({
-    //         first: 10,
-    //         groupTypes: 'Album',
-    //         groupName: 'Melanoma App'
-    //     });
-
-    //     const photoUris = res.edges.map(edge => {
-    //         const image = edge.node.image;
-    //         return {
-    //             uri: image.uri,
-    //             width: image.width,
-    //             height: image.height,
-    //             filename: image.filename,
-    //             timestamp: edge.node.timestamp
-    //         };
-    //     });
-    //     console.log(photoUris);
-    // }
+    async saveToExistingMole(existingMoleJSON, mole) {
+        const existingMole = JSON.parse(existingMoleJSON);
+        existingMole.images.push(mole.images[0]);
+        try {
+            await AsyncStorage.setItem(existingMole.id, JSON.stringify(existingMole));
+        } catch (err) {
+            ToastAndroid.show('Error saving to existing mole', ToastAndroid.SHORT);
+        }
+    }
 }
 
 const style = StyleSheet.create({
-    container: {
+    body: {
         padding: 16
     },
 
-    image: {
+    moleImage: {
         width: null,
         height: 200,
         marginBottom: 16
     },
 
-    goodResult: {
+    goodAIPrediction: {
         marginBottom: 4,
         color: 'green',
         fontWeight: 'bold'
     },
 
-    group: {
+    section: {
         marginBottom: 16
     },
 
-    colTitle: {
+    sectionHeading: {
         marginBottom: 8,
         fontSize: 18
     },
 
-    inputGroup: {
+    input: {
         marginBottom: 8
     },
 
-    buttons: {
+    footer: {
         alignItems: 'flex-end'
     }
 });

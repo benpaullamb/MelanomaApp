@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import { View, StyleSheet, ScrollView, Text, Picker } from 'react-native';
 import ImagePicker from 'react-native-image-picker';
 import AsyncStorage from '@react-native-community/async-storage';
+
 import MoleListItem from '../components/MoleListItem';
-import BetterButton from '../components/BetterButton';
+import MatButton from '../components/MatButton';
+import Utils from '../utils';
 
 export default class MoleListScreen extends Component {
 
     constructor(props) {
         super(props);
 
-        this.bodyParts = ['Back', 'Front Torso', 'Right Arm', 'Left Arm', 'Right Leg', 'Left Leg', 'Head']
-
         this.state = {
             loadedMoles: [],
-            location: this.bodyParts[0]
+            selectedLocation: Utils.bodyParts[0]
         };
 
         this.loadData();
@@ -24,19 +24,10 @@ export default class MoleListScreen extends Component {
         this.unsubscribe = this.props.navigation.addListener('didFocus', () => {
             this.loadData();
         });
-        // this.clearData();
     }
 
     componentWillUnmount() {
         this.unsubscribe.remove();
-    }
-
-    async clearData() {
-        try {
-            await AsyncStorage.clear();
-        } catch (err) {
-            console.log(err);
-        }
     }
 
     async loadData() {
@@ -49,29 +40,25 @@ export default class MoleListScreen extends Component {
                 loadedMoles: moles
             });
         } catch (err) {
-
+            ToastAndroid.show('Error loading moles', ToastAndroid.SHORT);
         }
     }
 
     render() {
-        const bodyPartItems = this.bodyParts.map(bodyPart => {
-            let count = 0;
-            this.state.loadedMoles.forEach(mole => {
-                if (mole.location === bodyPart) count++;
-            });
-            return <Picker.Item label={`${bodyPart} (${count})`} value={bodyPart} key={bodyPart} />
+        const locationPickerItems = Utils.bodyParts.map(bodyPart => {
+            return <Picker.Item label={`${bodyPart} (${this.getMoleCount(bodyPart)})`} value={bodyPart} key={bodyPart} />
         });
 
         return (
-            <View style={style.container}>
-                <Picker selectedValue={this.state.location} onValueChange={value => this.setState({ location: value })}
-                    mode="dropdown" style={style.picker}>
-                    {bodyPartItems}
+            <View style={style.body}>
+                <Picker selectedValue={this.state.selectedLocation} onValueChange={value => this.setState({ selectedLocation: value })}
+                    mode="dropdown" style={style.locationPicker}>
+                    {locationPickerItems}
                 </Picker>
 
-                <View style={style.top}>
-                    <Text style={style.count}>{this.state.loadedMoles.length} mole{this.state.loadedMoles.length === 1 ? '' : 's'} total</Text>
-                    <BetterButton title="New Image" onPress={() => this.addNewImage()} />
+                <View style={style.header}>
+                    <Text style={style.moleCount}>{this.state.loadedMoles.length} mole{this.state.loadedMoles.length === 1 ? '' : 's'} total</Text>
+                    <MatButton title="New Image" onPress={() => this.addNewImage()} />
                 </View>
 
                 <ScrollView>
@@ -81,8 +68,13 @@ export default class MoleListScreen extends Component {
         );
     }
 
-    getFilteredMoles() {
-        return this.state.loadedMoles.filter(mole => mole.location === this.state.location);
+    getMoleCount(bodyPart) {
+        if (!bodyPart) return 0;
+        let count = 0;
+        this.state.loadedMoles.forEach(mole => {
+            if (mole.location === bodyPart) count++;
+        });
+        return count;
     }
 
     addNewImage() {
@@ -91,28 +83,32 @@ export default class MoleListScreen extends Component {
         }, res => {
             if (res.didCancel || res.error) return;
 
-            this.props.navigation.navigate('Analysis', { picUri: res.uri });
+            this.props.navigation.navigate('Analysis', { imageUri: res.uri });
         });
+    }
+
+    getFilteredMoles() {
+        return this.state.loadedMoles.filter(mole => mole.location === this.state.selectedLocation);
     }
 }
 
 const style = StyleSheet.create({
-    container: {
+    body: {
         paddingHorizontal: 16,
         paddingBottom: 16
     },
 
-    picker: {
+    locationPicker: {
         marginBottom: 8
     },
 
-    top: {
+    header: {
         marginBottom: 8,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
 
-    count: {
+    moleCount: {
         fontSize: 14
     }
 });
