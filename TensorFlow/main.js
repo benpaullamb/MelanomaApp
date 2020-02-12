@@ -2,23 +2,23 @@ const tf = require('@tensorflow/tfjs');
 const tfn = require('@tensorflow/tfjs-node');
 const fs = require('fs');
 const path = require('path');
-const { loadImages, printImagesSummary, getImageCount, loadImage } = require('./imageIO');
+const { loadImages, printImagesSummary, getImageCount, loadImage, testDataAug } = require('./imageIO');
 const getLeNet5Model = require('./LeNet5Model');
 const getAlexNetModel = require('./AlexNetModel');
 
-async function start() {
+async function train() {
     console.time('Model Training Duration');
     // Load the model
     const model = await tf.loadLayersModel('file://./TensorFlow/saved-model/model.json');
     compileModel(model);
 
-    const cat1Dir = path.join(__dirname, './CatsAndDogs/Cat');
-    const cat2Dir = path.join(__dirname, './CatsAndDogs/Dog');
+    const cat1Dir = path.join(__dirname, './MED-NODE-Dataset/Melanoma');
+    const cat2Dir = path.join(__dirname, './MED-NODE-Dataset/Naevus');
 
     const cat1Count = await getImageCount(cat1Dir);
     const cat2Count = await getImageCount(cat2Dir);
     const maxImageCount = Math.min(cat1Count, cat2Count);
-    const epochImageCount = 2000;
+    const epochImageCount = 10;
     let iteration = 1;
 
     // Until there are no more images left
@@ -31,8 +31,8 @@ async function start() {
         // Train the model
         const trainingResults = await model.fit(xs, ys, {
             shuffle: true,
-            epochs: 12,
-            batchSize: 128,
+            epochs: 10,
+            batchSize: 20,
             validationSplit: 0.2
         });
 
@@ -48,7 +48,7 @@ async function start() {
 }
 
 async function getTrainingBatch(cat1Dir, cat2Dir, startIndex, endIndex) {
-    const imageSize = 200;
+    const imageSize = 400;
     const cat1Tensor = await loadImages(cat1Dir, imageSize, startIndex, endIndex);
     const cat2Tensor = await loadImages(cat2Dir, imageSize, startIndex, endIndex);
 
@@ -103,7 +103,7 @@ function avg(arr) {
 
 async function init() {
     console.log('Saving default LeNet model');
-    const model = getLeNet5Model([200, 200, 3]);
+    const model = getLeNet5Model([400, 400, 3]);
     compileModel(model);
     await model.save('file://./TensorFlow/saved-model');
 }
@@ -122,4 +122,6 @@ function getLabel(prediction) {
     return dist[0] > dist[1] ? 'Cat' : 'Dog';
 }
 
-start();
+train();
+
+// testDataAug();

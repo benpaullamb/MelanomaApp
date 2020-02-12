@@ -1,5 +1,6 @@
 const tf = require('@tensorflow/tfjs');
 const tfn = require('@tensorflow/tfjs-node');
+const Jimp = require('jimp');
 const fs = require('fs');
 const path = require('path');
 
@@ -8,7 +9,18 @@ async function loadImages(dir, imageSize, startIndex, endIndex) {
     console.log('--------------------------------');
     console.log(`Loading images from ${dir}`);
 
-    const imageTensors = await getImageTensorsFromDir(dir, startIndex, endIndex);
+    // const imageTensors = await getImageTensorsFromDir(dir, startIndex, endIndex);
+    const imageNames = await getImageNames(dir, startIndex, endIndex);
+    const imagePaths = imageNames.map(name => path.join(dir, name));
+    console.log('Augmenting images');
+    const jimpImages = await augmentImages(imagePaths);
+
+    console.log('Converting images into tensors');
+    const imageTensors = await Promise.all(jimpImages.map(async ji => {
+        const buffer = await ji.getBufferAsync(Jimp.MIME_JPEG);
+        return tfn.node.decodeJpeg(buffer, 3);
+    }));
+
     console.log(`Number of tensors in memory: ${tf.memory().numTensors}`);
 
     console.log('Resizing images');
@@ -211,10 +223,82 @@ async function getImageNames(dir, startIndex, endIndex) {
     return res.slice(startIndex, endIndex);
 }
 
+async function testDataAug() {
+    const imageNames = await getImageNames(path.join(__dirname, './MED-NODE-Dataset/Melanoma'), 0, 2);
+    const imagePaths = imageNames.map(name => path.join(__dirname, './MED-NODE-Dataset/Melanoma', name));
+    const jimpImages = await augmentImages(imagePaths);
+
+    const imageTensors = await Promise.all(jimpImages.map(async ji => {
+        const buffer = await ji.getBufferAsync(Jimp.MIME_JPEG);
+        return tfn.node.decodeJpeg(buffer, 3);
+    }));
+
+    const resizedImages = await resizeImages(imageTensors, 200);
+
+    const tensor = batchTensors(resizedImages);
+    saveTensorAsImages(tensor, path.join(__dirname, './test'));
+}
+
+async function augmentImages(imagePaths) {
+    if (!imagePaths) return;
+
+    try {
+        const images2d = await Promise.all(imagePaths.map(async imagePath => {
+            const origImage = await Jimp.read(imagePath);
+            const augImages = [origImage];
+            for (let i = 0; i < 10; ++i) {
+                let image = origImage.clone();
+
+                const rotation = (Math.random() * 90) - 45; // -45 to 45
+                const brightness = Math.random() - 0.5; // -0.5 to 0.5
+                const blur = Math.ceil(Math.random() * 3); // 1, 2, 3
+
+                const crop = {
+                    x: 0,
+                    y: 0,
+                    width: image.bitmap.width,
+                    height: image.bitmap.height
+                };
+                if (Math.random() > 0.5) {
+                    crop.x += Math.round(Math.random() * crop.width * 0.2);
+                    crop.width -= crop.x;
+                }
+                if (Math.random() > 0.5) {
+                    crop.y += Math.round(Math.random() * crop.height * 0.2);
+                    crop.height -= crop.y;
+                }
+                if (Math.random() > 0.5) crop.width -= Math.round(Math.random() * crop.width * 0.2);
+                if (Math.random() > 0.5) crop.height -= Math.round(Math.random() * crop.height * 0.2);
+
+                if (Math.random() > 0.3) image.crop(crop.x, crop.y, crop.width, crop.height);
+                if (Math.random() > 0.3) image.flip(Math.random() > 0.5, Math.random() > 0.5);
+                if (Math.random() > 0.3) image.rotate(rotation, false);
+                if (Math.random() > 0.3) image.brightness(brightness);
+                if (Math.random() > 0.3) image.blur(blur);
+
+                augImages.push(image);
+            }
+
+            return augImages;
+        }));
+
+        const flattenedImages = [];
+        images2d.forEach(imageSet => {
+            flattenedImages.push(...imageSet);
+        });
+
+        return flattenedImages;
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 module.exports = {
     loadImages,
     printImagesSummary,
     saveTensorAsImages,
     getImageCount,
-    loadImage
+    loadImage,
+    testDataAug
 };

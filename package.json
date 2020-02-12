@@ -17,6 +17,7 @@
     "@react-native-community/masked-view": "^0.1.6",
     "@tensorflow/tfjs": "^1.5.2",
     "@tensorflow/tfjs-node": "^1.5.2",
+    "jimp": "^0.9.3",
     "moment": "^2.24.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
