@@ -4,13 +4,23 @@ const fs = require('fs');
 const path = require('path');
 const { loadImages, testDataAug } = require('./imageIO');
 const { printImagesSummary, getImageCount } = require('./imageSummary');
-const getLeNet5Model = require('./LeNet5Model');
+const getLeNet5Model = require('./Models/LeNet5Model');
+const getAlexNetModel = require('./Models/AlexNetModel');
+
+const modelConfig = {
+    dataAPath: path.join(__dirname, './Datasets/ISIC/Melanoma'),
+    dataBPath: path.join(__dirname, './Datasets/ISIC/Nevus'),
+    name: 'model',
+    saveDir: 'file://./TensorFlow/Trained Models/isic-alexnet',
+    trainResPath: './Trained Models/isic-alexnet/train-res',
+    continueFromImageNum: 0
+};
 
 const hyperparams = {
-    imageSize: 400,
-    originalImagesPerBatch: 10,
+    imageSize: 500,
+    originalImagesPerBatch: 20,
     epochsPerBatch: 10,
-    modelBatchSize: 20,
+    modelBatchSize: 32,
     validationSplit: 0.2,
     loss: 'categoricalCrossentropy',
     optimizer: tf.train.adam()
@@ -19,23 +29,20 @@ const hyperparams = {
 async function train() {
     console.time('Model Training Duration');
     // Load the model
-    const model = await tf.loadLayersModel('file://./TensorFlow/saved-model/model.json');
+    const model = await tf.loadLayersModel(`${modelConfig.saveDir}/${modelConfig.name}.json`);
     compileModel(model);
 
-    const cat1Dir = path.join(__dirname, './MED-NODE-Dataset/Melanoma');
-    const cat2Dir = path.join(__dirname, './MED-NODE-Dataset/Naevus');
-
-    const cat1Count = await getImageCount(cat1Dir);
-    const cat2Count = await getImageCount(cat2Dir);
+    const cat1Count = await getImageCount(modelConfig.dataAPath);
+    const cat2Count = await getImageCount(modelConfig.dataBPath);
     const maxImageCount = Math.min(cat1Count, cat2Count);
     let iteration = 1;
 
     // Until there are no more images left
-    for (let i = 0; i < maxImageCount; i += (hyperparams.originalImagesPerBatch / 2)) {
+    for (let i = modelConfig.continueFromImageNum; i < maxImageCount; i += (hyperparams.originalImagesPerBatch / 2)) {
         console.log(`\nIteration ${iteration}`);
         iteration++;
         // Get the next batch of images
-        const { xs, ys } = await getTrainingBatch(cat1Dir, cat2Dir, i, i + (hyperparams.originalImagesPerBatch / 2));
+        const { xs, ys } = await getTrainingBatch(modelConfig.dataAPath, modelConfig.dataBPath, i, i + (hyperparams.originalImagesPerBatch / 2));
 
         // Train the model
         const trainingResults = await model.fit(xs, ys, {
@@ -49,9 +56,9 @@ async function train() {
         ys.dispose();
 
         // Save the model
-        await model.save(`file://./TensorFlow/saved-model`);
+        await model.save(modelConfig.saveDir);
 
-        const filePath = path.join(__dirname, './saved-model/training-results.json');
+        const filePath = path.join(__dirname, `${modelConfig.trainResPath}.json`);
         saveTrainingResults(trainingResults.history, filePath);
     }
 
@@ -89,8 +96,15 @@ function avg(arr) {
 function saveTrainingResults(res, filePath) {
     console.log('Saving training results');
 
-    const prevResJson = fs.readFileSync(filePath, 'utf8');
-    const prevRes = JSON.parse(prevResJson);
+    let prevRes = {
+        results: []
+    };
+
+    try {
+        const prevResJson = fs.readFileSync(filePath, 'utf8');
+        prevRes = JSON.parse(prevResJson);
+    } catch (err) {
+    }
 
     prevRes.results.push({
         acc: avg(res.acc),
@@ -116,15 +130,15 @@ function compileModel(model) {
 }
 
 async function init() {
-    console.log('Saving default LeNet model');
-    const model = getLeNet5Model([hyperparams.imageSize, hyperparams.imageSize, 3]);
+    console.log('Saving default model');
+    const model = getAlexNetModel([hyperparams.imageSize, hyperparams.imageSize, 3]);
     compileModel(model);
-    await model.save('file://./TensorFlow/saved-model');
+    await model.save(modelConfig.saveDir);
 }
 // init();
 
-train();
+// train();
 
 // testDataAug();
 
-// printImagesSummary(path.join(__dirname, './MED-NODE-Dataset/Melanoma'));
+printImagesSummary('./TensorFlow/Datasets/ISIC/Melanoma', 0, 200);

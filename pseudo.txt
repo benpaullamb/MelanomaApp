@@ -1,0 +1,107 @@
+Pascal style pseudocode
+
+procedure fizzbuzz
+end
+
+print "Fizz"
+
+set print_number to true
+
+If i is divisible by 3 then
+
+For i = 1 to 100 do
+
+
+
+procedure train_model
+    load model
+
+    For i = last_trained_image to last_image do
+
+        set images and labels to get_batch from i to i plus batch_size
+
+        train model on images and labels
+
+        save model
+end
+
+procedure get_batch (start_num, end_num)
+    set melanoma_images to load_images in melanoma_dir from start_num to end_num
+    set benign_images to load_images in benign_dir from start_num to end_num
+
+    For each image in melanoma_images do
+        append 1, 0 to labels
+
+    For each image in benign_images do
+        append 0, 1 to labels
+
+    set images to melanoma_images plus benign_images
+
+    return images and labels
+end
+
+procedure load_images (dir, start_num, end_num, image_size)
+    set image_paths to find_paths in dir from start_num to end_num
+
+    set images to get_images from image_paths
+
+    data_augment images
+
+    set images to tensors
+
+    resize images to image_size
+
+    batch images
+
+    normalise images
+
+    return images
+end
+
+procedure resize (images, image_size)
+    For each image in images
+
+        set cropped_size to nearest 100 less than or equal to the smaller image dimension
+
+        set x1 to half width minus half cropped_size
+        set x2 to half width plus half cropped_size
+        
+        set y1 to half height minus half cropped_size
+        set y2 to half height plus half cropped_size
+
+        crop_and_resize image to x1, y1, x2, y2 and image_size
+    
+    return images
+end
+
+procedure data_augment (images)
+    set augment_rate to 10
+    set augmented_images to an empty array
+
+    For each image in images do
+
+        append image to augmented_images
+
+        For i = 0 to augment_rate minus 1 do
+
+            set clone to clone of image
+
+            If random is less than chance then
+                crop clone by random_crop
+
+            If random is less than chance then
+                flip clone by random_flip
+            
+            If random is less than chance then
+                rotate clone by random_rotate
+            
+            If random is less than chance then
+                brighten clone by random_brighten
+            
+            If random is less than chance then
+                blur clone by random_blur
+
+            append clone to augmented_images
+    
+    return augmented_images
+end

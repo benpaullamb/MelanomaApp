@@ -58,7 +58,10 @@ function saveImages(tensor, dir) {
 }
 
 function normaliseImages(tensor) {
-    return tf.div(tensor, tf.scalar(255));
+    const scalar = tf.scalar(255);
+    const normalised = tf.div(tensor, scalar);
+    scalar.dispose();
+    return normalised;
 }
 
 function batchTensors(tensors) {
@@ -122,7 +125,7 @@ async function testDataAug() {
     console.log('--------------------------------');
 
     console.log('Finding images');
-    const imagePaths = await getImagePaths(path.join(__dirname, './MED-NODE-Dataset/Melanoma'), 0, 2);
+    const imagePaths = await getImagePaths(path.join(__dirname, './Datasets/ISIC/Melanoma'), 0, 1);
     console.log(`${imagePaths.length} images found`);
 
     console.log('Augmenting');
@@ -130,14 +133,14 @@ async function testDataAug() {
     console.log(`${augmentedTensors.length} augmented images generated`);
 
     console.log('Resizing');
-    const resizedImages = await resizeImages(augmentedTensors, 400);
+    const resizedImages = await resizeImages(augmentedTensors, 500);
     augmentedTensors.forEach(t => t.dispose());
 
     console.log('Batching');
     const tensor = batchTensors(resizedImages);
     resizedImages.forEach(t => t.dispose());
 
-    const savePath = path.join(__dirname, './MED-NODE-Dataset/augment-test');
+    const savePath = path.join(__dirname, './Datasets/Test Images');
     console.log(`Saving to ${savePath}`);
     saveImages(tensor, savePath);
 }

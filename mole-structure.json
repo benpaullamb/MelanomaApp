@@ -1,0 +1,11 @@
+{
+    "id": "string",
+    "location": "string",
+    "images": [
+        {
+            "uri": "string",
+            "date": "string",
+            "aiPrediction": "array"
+        }
+    ]
+}

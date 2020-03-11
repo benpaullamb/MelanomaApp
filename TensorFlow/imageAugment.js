@@ -16,13 +16,15 @@ async function augmentImages(imagePaths) {
     if (!imagePaths) return;
 
     try {
-        const jimpImages = await Promise.all(imagePaths.map(async imagePath => await Jimp.read(imagePath)));
         const augmentedImages = [];
 
-        jimpImages.forEach(original => {
-            augmentedImages.push(original);
+        for (let i = 0; i < imagePaths.length; ++i) {
+            const original = await Jimp.read(imagePaths[i]);
 
-            for (let i = 0; i < (augmentRate - 1); ++i) {
+            augmentedImages.push(await jimpToTensor(original));
+
+            for (let j = 0; j < (augmentRate - 1); ++j) {
+                console.log(`${i + 1}: ${j + 1}`);
                 const image = original.clone();
 
                 const crop = getRandomCrop(image, maxCrop, cropSideChance);
@@ -36,16 +38,54 @@ async function augmentImages(imagePaths) {
                 if (Math.random() < augmentChance) image.brightness(brightness);
                 if (Math.random() < augmentChance) image.blur(blur);
 
-                augmentedImages.push(image);
+                augmentedImages.push(await jimpToTensor(image));
             }
-        });
+        }
 
-        return jimpsToTensors(augmentedImages);
-
+        return augmentedImages;
     } catch (err) {
         console.log(err);
     }
+
+    return [];
 }
+
+// async function augmentImages(imagePaths) {
+//     if (!imagePaths) return;
+
+//     try {
+//         const jimpImages = await Promise.all(imagePaths.map(async imagePath => await Jimp.read(imagePath)));
+//         const augmentedImages = [];
+
+//         jimpImages.forEach((original, j) => {
+//             console.log(`${j + 1}`);
+//             augmentedImages.push(original);
+
+//             for (let i = 0; i < (augmentRate - 1); ++i) {
+//                 console.log(`${j + 1}: ${i + 1}`);
+//                 const image = original.clone();
+
+//                 const crop = getRandomCrop(image, maxCrop, cropSideChance);
+//                 const rotation = (Math.random() * maxRotation * 2) - maxRotation;
+//                 const brightness = (Math.random() * maxBrighten * 2) - maxBrighten;
+//                 const blur = Math.ceil(Math.random() * maxBlur);
+
+//                 if (Math.random() < augmentChance) image.crop(crop.x, crop.y, crop.width, crop.height);
+//                 if (Math.random() < augmentChance) image.flip(Math.random() < flipChance, Math.random() < flipChance);
+//                 if (Math.random() < augmentChance) image.rotate(rotation, false);
+//                 if (Math.random() < augmentChance) image.brightness(brightness);
+//                 if (Math.random() < augmentChance) image.blur(blur);
+
+//                 augmentedImages.push(image);
+//             }
+//         });
+
+//         return jimpsToTensors(augmentedImages);
+
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
 
 function getRandomCrop(image) {
     if (!image) return {};
@@ -76,6 +116,13 @@ async function jimpsToTensors(images) {
         const buffer = await image.getBufferAsync(Jimp.MIME_JPEG);
         return tfn.node.decodeJpeg(buffer, 3);
     }));
+}
+
+async function jimpToTensor(jimp) {
+    const buffer = await jimp.getBufferAsync(Jimp.MIME_JPEG);
+    const t = tfn.node.decodeJpeg(buffer, 3);
+    console.log(t.shape);
+    return t;
 }
 
 module.exports = augmentImages;

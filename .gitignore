@@ -58,7 +58,5 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
-TensorFlow/MED-NODE-Dataset/
-TensorFlow/CatsAndDogs/
-TensorFlow/saved-model/
-TensorFlow/saved-model-1/
+TensorFlow/Datasets/
+TensorFlow/Trained Models/
