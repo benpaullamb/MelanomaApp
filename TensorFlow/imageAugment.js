@@ -2,6 +2,8 @@ const Jimp = require('jimp');
 const tf = require('@tensorflow/tfjs');
 const tfn = require('@tensorflow/tfjs-node');
 
+let verbose = false;
+
 const augmentRate = 10;
 const augmentChance = 0.5;
 const flipChance = 0.5;
@@ -12,7 +14,7 @@ const maxRotation = 45;
 const maxBrighten = 0.5;
 const maxBlur = 3;
 
-async function augmentImages(imagePaths) {
+async function augmentImages(imagePaths, augment = true) {
     if (!imagePaths) return;
 
     try {
@@ -23,8 +25,10 @@ async function augmentImages(imagePaths) {
 
             augmentedImages.push(await jimpToTensor(original));
 
+            if (!augment) continue;
+
             for (let j = 0; j < (augmentRate - 1); ++j) {
-                console.log(`${i + 1}: ${j + 1}`);
+                if (verbose) console.log(`${i + 1}: ${j + 1}`);
                 const image = original.clone();
 
                 const crop = getRandomCrop(image, maxCrop, cropSideChance);
@@ -121,7 +125,7 @@ async function jimpsToTensors(images) {
 async function jimpToTensor(jimp) {
     const buffer = await jimp.getBufferAsync(Jimp.MIME_JPEG);
     const t = tfn.node.decodeJpeg(buffer, 3);
-    console.log(t.shape);
+    if (verbose) console.log(t.shape);
     return t;
 }
 

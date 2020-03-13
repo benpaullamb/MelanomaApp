@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const augmentImages = require('./imageAugment');
 
-async function loadImages(dir, imageSize, startIndex, endIndex) {
+async function loadImages(dir, imageSize, startIndex, endIndex, augment = true) {
     console.time('Load Images Duration');
     console.log('--------------------------------');
     console.log(`Loading images from ${dir}`);
@@ -14,7 +14,7 @@ async function loadImages(dir, imageSize, startIndex, endIndex) {
     console.log(`${imagePaths.length} images found`);
 
     console.log('Augmenting');
-    const augmentedImages = await augmentImages(imagePaths);
+    const augmentedImages = await augmentImages(imagePaths, augment);
     console.log(`${augmentedImages.length} augmented images generated`);
 
     console.log(`Number of tensors in memory: ${tf.memory().numTensors}`);

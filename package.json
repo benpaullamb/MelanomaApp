@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "ts": "node TensorFlow/main.js"
+    "tf": "node TensorFlow/main.js"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
