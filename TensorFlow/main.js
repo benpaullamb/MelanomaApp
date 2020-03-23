@@ -8,6 +8,7 @@ const getLeNet5Model = require('./Models/LeNet5Model');
 const getAlexNetModel = require('./Models/AlexNetModel');
 const evaluateModel = require('./evaluation');
 
+// File saving configuration
 const modelConfig = {
     dataAPath: path.join(__dirname, './Datasets/ISIC/Melanoma'),
     dataBPath: path.join(__dirname, './Datasets/ISIC/Nevus'),
@@ -17,6 +18,7 @@ const modelConfig = {
     continueFromImageNum: 0
 };
 
+// Model training hyperparameters
 const hyperparams = {
     imageSize: 500,
     originalImagesPerBatch: 20,
@@ -27,18 +29,23 @@ const hyperparams = {
     optimizer: tf.train.adam()
 };
 
+// The main training function
 async function train() {
     console.time('Model Training Duration');
     // Load the model
     const model = await tf.loadLayersModel(`${modelConfig.saveDir}/${modelConfig.name}.json`);
     compileModel(model);
 
+    // Get an even number of images from both positive/negative image categories
     const cat1Count = await getImageCount(modelConfig.dataAPath);
     const cat2Count = await getImageCount(modelConfig.dataBPath);
+    // If we have more of one than the other, use the smaller number
+    // So that the model doesn't overtrain on one category
     const maxImageCount = Math.min(cat1Count, cat2Count);
     let iteration = 1;
 
     // Until there are no more images left
+    // Only increase by half a batch as one batch is made up of half of each category
     for (let i = modelConfig.continueFromImageNum; i < maxImageCount; i += (hyperparams.originalImagesPerBatch / 2)) {
         console.log(`\nIteration ${iteration}`);
         iteration++;
@@ -58,7 +65,7 @@ async function train() {
 
         // Save the model
         await model.save(modelConfig.saveDir);
-
+        // Save training information
         const filePath = path.join(__dirname, `${modelConfig.trainResPath}.json`);
         saveTrainingResults(trainingResults.history, filePath);
     }
@@ -101,6 +108,7 @@ function saveTrainingResults(res, filePath) {
         results: []
     };
 
+    // Attempt to load previous results if they exist
     try {
         const prevResJson = fs.readFileSync(filePath, 'utf8');
         prevRes = JSON.parse(prevResJson);
@@ -133,6 +141,7 @@ function save(object, filePath) {
     fs.writeFileSync(filePath, JSON.stringify(prevSave));
 }
 
+// Model needs to be compiled after loading
 function compileModel(model) {
     model.compile({
         loss: hyperparams.loss,
@@ -148,12 +157,16 @@ function compileModel(model) {
 //     await model.save(modelConfig.saveDir);
 // }
 
+// Does the actual evaluating of the model
 async function testModel() {
     console.log(`Evaluating model`);
 
+    // Loads the model
     const model = await tf.loadLayersModel(`${modelConfig.saveDir}/${modelConfig.name}.json`);
     compileModel(model);
 
+    // Declare the images to evaluate on
+    // Images past about 1100 have not been seen by the model
     const startIndex = 1500;
     const batchSizePerClass = 50;
     const totalTestSize = 400;
@@ -161,16 +174,19 @@ async function testModel() {
     let accuracies = [];
     let losses = [];
 
+    // For each batch
     for (let j = startIndex; j < startIndex + totalTestSize; j += batchSizePerClass) {
         console.log(`Evaluating images ${j} to ${j + batchSizePerClass}`);
-
+        // Load the images without augmentation
         const { xs, ys } = await getTrainingBatch(modelConfig.dataAPath, modelConfig.dataBPath, j, j + batchSizePerClass, false);
 
+        // Use TensorFlows evaluate method to get the accuracy and loss
         const metrics = model.evaluate(xs, ys, { batchSize: 32 });
         losses.push(metrics[0].dataSync()[0]);
         accuracies.push(metrics[1].dataSync()[0]);
         metrics.forEach(t => t.dispose());
 
+        // Convert the true labels tensor into an array of words
         let trueLabels = tf.split(ys, ys.shape[0]);
         trueLabels = trueLabels.map(y => {
             const intY = y.dataSync().map(prob => Math.round(prob));
@@ -179,12 +195,16 @@ async function testModel() {
         });
 
         const images = tf.split(xs, xs.shape[0]);
+        // For each image
         images.forEach((image, i) => {
+            // Run it through the model and get a prediction
             const predictionTensor = model.predict(image);
             image.dispose();
             const probabilities = predictionTensor.dataSync();
             predictionTensor.dispose();
 
+            // Save the true label and the probabilities of each category from the prediction
+            // Separates the metrics calculations and the length evaluation process
             save({
                 trueLabel: trueLabels[i],
                 probabilities: [probabilities['0'], probabilities['1']]
@@ -201,11 +221,11 @@ async function testModel() {
     console.log(`Accuracy: ${toPercent(accuracy)}, Loss: ${toPercent(loss)}`);
 }
 
-function avg(arr) {
-    let sum = 0;
-    arr.forEach(el => sum += el);
-    return sum / arr.length;
-}
+// function avg(arr) {
+//     let sum = 0;
+//     arr.forEach(el => sum += el);
+//     return sum / arr.length;
+// }
 
 function toPercent(num) {
     return `${(num * 100).toFixed(1)}%`;
