@@ -1,0 +1,5604 @@
+{
+    "results": [
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.35570135712623596,
+                0.6442986726760864
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6778674721717834,
+                0.32213252782821655
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7959350347518921,
+                0.20406502485275269
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9484535455703735,
+                0.05154639855027199
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7753512859344482,
+                0.22464880347251892
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.444568008184433,
+                0.5554319620132446
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9822166562080383,
+                0.017783304676413536
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8100035190582275,
+                0.18999649584293365
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9713353514671326,
+                0.02866453304886818
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7487534880638123,
+                0.25124654173851013
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8653023838996887,
+                0.1346975862979889
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8810932636260986,
+                0.11890671402215958
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8670517802238464,
+                0.13294821977615356
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8784796595573425,
+                0.12152031064033508
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.09231919050216675,
+                0.9076807498931885
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9984248280525208,
+                0.0015752797480672598
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6751940846443176,
+                0.3248059153556824
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8203150033950806,
+                0.17968496680259705
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9625297784805298,
+                0.03747016564011574
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8097084760665894,
+                0.19029155373573303
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7766286134719849,
+                0.22337138652801514
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9359816908836365,
+                0.06401830911636353
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.79756760597229,
+                0.20243242383003235
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9227374196052551,
+                0.07726269960403442
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7507537603378296,
+                0.2492462396621704
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8710101246833801,
+                0.12898987531661987
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7475411295890808,
+                0.2524588108062744
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.4010471701622009,
+                0.5989528298377991
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476246953010559,
+                0.2523753046989441
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8417139649391174,
+                0.15828606486320496
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.952428936958313,
+                0.04757112264633179
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9266214370727539,
+                0.07337845116853714
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8998150825500488,
+                0.10018493980169296
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6993547677993774,
+                0.30064523220062256
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7465346455574036,
+                0.2534652650356293
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9776588678359985,
+                0.022341014817357063
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7960003614425659,
+                0.2039995938539505
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7449894547462463,
+                0.25501054525375366
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.5314518809318542,
+                0.4685482382774353
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9764745831489563,
+                0.023525433614850044
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7485209703445435,
+                0.25147897005081177
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7523919939994812,
+                0.24760796129703522
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7385033369064331,
+                0.2614966928958893
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9808240532875061,
+                0.01917591132223606
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.871583104133606,
+                0.12841686606407166
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.829846203327179,
+                0.17015376687049866
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7972046732902527,
+                0.20279543101787567
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475895881652832,
+                0.2524103820323944
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0006388156907632947,
+                0.9993612170219421
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.000007989717232703697,
+                0.9999918937683105
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.01619400642812252,
+                0.9838061332702637
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.06563115119934082,
+                0.9343687891960144
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7384498715400696,
+                0.2615501284599304
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.042012520134449005,
+                0.9579874873161316
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7472965121269226,
+                0.2527035176753998
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.10556943714618683,
+                0.8944305777549744
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7461473941802979,
+                0.25385260581970215
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.014280730858445168,
+                0.9857191443443298
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476105690002441,
+                0.25238946080207825
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.024259205907583237,
+                0.9757407903671265
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476128339767456,
+                0.25238722562789917
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.20901677012443542,
+                0.7909832000732422
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6445295214653015,
+                0.3554705083370209
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.005599816795438528,
+                0.9944002628326416
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7395886182785034,
+                0.2604113519191742
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.021963607519865036,
+                0.9780363440513611
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6812599301338196,
+                0.31874004006385803
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0000023557249733130448,
+                0.999997615814209
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476276159286499,
+                0.25237247347831726
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.19282189011573792,
+                0.8071780800819397
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7479541301727295,
+                0.25204578042030334
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.008336655795574188,
+                0.9916633367538452
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8790985941886902,
+                0.12090138345956802
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.2941824495792389,
+                0.7058175206184387
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0008174045360647142,
+                0.9991825819015503
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7604010701179504,
+                0.23959895968437195
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.714801013469696,
+                0.28519898653030396
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.1309630572795868,
+                0.8690369129180908
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.2435121089220047,
+                0.7564879059791565
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.008356806822121143,
+                0.9916432499885559
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7613976001739502,
+                0.2386024296283722
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7463763952255249,
+                0.2536236345767975
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7357024550437927,
+                0.26429757475852966
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.11457694321870804,
+                0.8854230642318726
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7821675539016724,
+                0.21783246099948883
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.747797429561615,
+                0.252202570438385
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6856209635734558,
+                0.31437909603118896
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476104497909546,
+                0.252389520406723
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.748190701007843,
+                0.251809298992157
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.03592943027615547,
+                0.9640705585479736
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7479972243309021,
+                0.2520027160644531
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7757683396339417,
+                0.22423170506954193
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7285325527191162,
+                0.2714674472808838
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7214781641960144,
+                0.2785218060016632
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8077458143234253,
+                0.19225412607192993
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.91090989112854,
+                0.08909019082784653
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9945593476295471,
+                0.005440619308501482
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6353795528411865,
+                0.3646203577518463
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9633642435073853,
+                0.03663567826151848
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.774098813533783,
+                0.22590114176273346
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.750769317150116,
+                0.2492307722568512
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8241639733314514,
+                0.17583604156970978
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9479618072509766,
+                0.05203821510076523
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8348519802093506,
+                0.16514810919761658
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7407441735267639,
+                0.2592558264732361
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.30719754099845886,
+                0.692802369594574
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9304079413414001,
+                0.06959203630685806
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6527215242385864,
+                0.3472784757614136
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9485716819763184,
+                0.051428381353616714
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7659236788749695,
+                0.23407621681690216
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9999809265136719,
+                0.00001929969948832877
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9502803683280945,
+                0.04971962049603462
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8261638283729553,
+                0.17383623123168945
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7423319816589355,
+                0.25766807794570923
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.5663927793502808,
+                0.43360722064971924
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9329326748847961,
+                0.06706734001636505
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7480924725532532,
+                0.2519075572490692
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7550546526908875,
+                0.24494534730911255
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8568751215934753,
+                0.14312492311000824
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7649304866790771,
+                0.23506946861743927
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8032366037368774,
+                0.19676338136196136
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.987346351146698,
+                0.012653740122914314
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7496978640556335,
+                0.2503020763397217
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7849391102790833,
+                0.21506093442440033
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.840742826461792,
+                0.15925724804401398
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9861664772033691,
+                0.013833414763212204
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7341128587722778,
+                0.2658871114253998
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7469214797019958,
+                0.25307855010032654
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7410402894020081,
+                0.25895971059799194
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9978734254837036,
+                0.0021267493721097708
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8436328172683716,
+                0.15636718273162842
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7516580820083618,
+                0.248341903090477
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7589014768600464,
+                0.24109843373298645
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7360959649085999,
+                0.26390406489372253
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.589410662651062,
+                0.410589337348938
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.18228593468666077,
+                0.8177140355110168
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7467167973518372,
+                0.25328317284584045
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9170754551887512,
+                0.08292445540428162
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9903478026390076,
+                0.009652100503444672
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9344311356544495,
+                0.06556887179613113
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.028873218223452568,
+                0.9711267352104187
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7455127239227295,
+                0.2544873058795929
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7333354353904724,
+                0.2666645646095276
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6758537888526917,
+                0.32414618134498596
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.04910169914364815,
+                0.950898289680481
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7069518566131592,
+                0.2930481731891632
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0012987775262445211,
+                0.9987012147903442
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8546923995018005,
+                0.1453074961900711
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.3103588819503784,
+                0.6896411180496216
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7430892586708069,
+                0.2569107115268707
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8373221158981323,
+                0.1626778244972229
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0011367585975676775,
+                0.998863160610199
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6976210474967957,
+                0.30237895250320435
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7471760511398315,
+                0.25282400846481323
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.1939440369606018,
+                0.8060559630393982
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6935052871704102,
+                0.30649474263191223
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.759666919708252,
+                0.24033305048942566
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.045701321214437485,
+                0.9542986750602722
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7473334670066833,
+                0.25266653299331665
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0019034891156479716,
+                0.9980965852737427
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7433340549468994,
+                0.256665974855423
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6373860239982605,
+                0.3626139760017395
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475331425666809,
+                0.25246691703796387
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7469121217727661,
+                0.2530878484249115
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.000003841614670818672,
+                0.9999961853027344
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7409261465072632,
+                0.2590738832950592
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.625337541103363,
+                0.3746623992919922
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00040635716868564487,
+                0.9995937943458557
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7320010662078857,
+                0.26799893379211426
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6948634386062622,
+                0.3051365315914154
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.10153699666261673,
+                0.8984630107879639
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7477395534515381,
+                0.2522604167461395
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.002111462177708745,
+                0.9978883862495422
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.830967366695404,
+                0.16903267800807953
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.015200961381196976,
+                0.9847990274429321
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476574778556824,
+                0.2523425221443176
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.07006590068340302,
+                0.929934024810791
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7692176103591919,
+                0.2307824045419693
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00030864326981827617,
+                0.9996915459632874
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7473385334014893,
+                0.25266146659851074
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7484541535377502,
+                0.25154587626457214
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7478277683258057,
+                0.2521723210811615
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6759766936302185,
+                0.3240233361721039
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476097941398621,
+                0.25239017605781555
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7536102533340454,
+                0.24638977646827698
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7569318413734436,
+                0.24306811392307281
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.11517801880836487,
+                0.8848219513893127
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7478423118591309,
+                0.25215765833854675
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7394886016845703,
+                0.2605113685131073
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476497292518616,
+                0.2523502707481384
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7646088600158691,
+                0.23539111018180847
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8826510310173035,
+                0.11734887957572937
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.999840259552002,
+                0.0001599599199835211
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8731827139854431,
+                0.1268172264099121
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.769761323928833,
+                0.230238676071167
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7519741058349609,
+                0.24802592396736145
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8092596530914307,
+                0.19074039161205292
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9995557069778442,
+                0.0004443325160536915
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6288794875144958,
+                0.37112048268318176
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8904668688774109,
+                0.10953307151794434
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7502939105033875,
+                0.24970602989196777
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9034286737442017,
+                0.09657137095928192
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9985048174858093,
+                0.0014952922938391566
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.3270370066165924,
+                0.67296302318573
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.782987654209137,
+                0.21701234579086304
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9233248829841614,
+                0.07667512446641922
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7414487600326538,
+                0.2585512399673462
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7365360260009766,
+                0.2634640038013458
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7409345507621765,
+                0.2590653598308563
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.753501832485199,
+                0.24649812281131744
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6692479848861694,
+                0.33075201511383057
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8584059476852417,
+                0.14159391820430756
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8029700517654419,
+                0.19702990353107452
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8110737204551697,
+                0.18892624974250793
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7982192039489746,
+                0.20178081095218658
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8252202868461609,
+                0.1747797578573227
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7660271525382996,
+                0.23397283256053925
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.945260763168335,
+                0.05473921075463295
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8257783651351929,
+                0.17422161996364594
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8847135305404663,
+                0.11528640240430832
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.754196047782898,
+                0.24580395221710205
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7555635571479797,
+                0.24443651735782623
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9938413500785828,
+                0.006158541422337294
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7593861818313599,
+                0.24061383306980133
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.753756046295166,
+                0.2462439090013504
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7479409575462341,
+                0.2520590126514435
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.845600962638855,
+                0.15439900755882263
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9942023158073425,
+                0.005797725636512041
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.756585419178009,
+                0.24341459572315216
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8633978962898254,
+                0.13660214841365814
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8783861994743347,
+                0.1216137558221817
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7680097222328186,
+                0.23199021816253662
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8869454860687256,
+                0.11305448412895203
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9254390597343445,
+                0.0745609924197197
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8384034633636475,
+                0.16159653663635254
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7509800791740417,
+                0.24901996552944183
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7929754257202148,
+                0.20702451467514038
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.3522014319896698,
+                0.6477985978126526
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.043579112738370895,
+                0.9564208984375
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.025229698047041893,
+                0.9747702479362488
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7518460750579834,
+                0.248153954744339
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476178407669067,
+                0.25238215923309326
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                9.137852998719609e-7,
+                0.9999990463256836
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.018750250339508057,
+                0.9812497496604919
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.04345230013132095,
+                0.9565477967262268
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7512016892433167,
+                0.24879828095436096
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.03296529874205589,
+                0.967034637928009
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.11705207824707031,
+                0.8829480409622192
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7979597449302673,
+                0.2020401805639267
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7372975945472717,
+                0.26270243525505066
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00003512335388222709,
+                0.999964714050293
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.03417562320828438,
+                0.9658244252204895
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.752129077911377,
+                0.24787092208862305
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.014081757515668869,
+                0.9859182238578796
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.152711883187294,
+                0.8472881317138672
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8609031438827515,
+                0.13909679651260376
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.24031756818294525,
+                0.7596824169158936
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.013424931094050407,
+                0.9865750074386597
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7325249910354614,
+                0.2674750089645386
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7680646181106567,
+                0.23193539679050446
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.012037255801260471,
+                0.9879627823829651
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7207197546958923,
+                0.2792803645133972
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7177966237068176,
+                0.28220334649086
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7472521066665649,
+                0.25274786353111267
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7459602355957031,
+                0.2540398836135864
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.5116603374481201,
+                0.48833969235420227
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7648822665214539,
+                0.23511770367622375
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.2602226138114929,
+                0.7397773265838623
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.011035998351871967,
+                0.9889639019966125
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7478516697883606,
+                0.2521483600139618
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8404586911201477,
+                0.15954135358333588
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.000027551763196242973,
+                0.9999723434448242
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7462924718856812,
+                0.25370755791664124
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7529115080833435,
+                0.2470885068178177
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.31050655245780945,
+                0.6894934773445129
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7076255083084106,
+                0.29237449169158936
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.751873791217804,
+                0.24812623858451843
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00011185868788743392,
+                0.9998884201049805
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.9185789227485657,
+                0.08142112195491791
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.31534984707832336,
+                0.684650182723999
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7251873016357422,
+                0.27481260895729065
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7462670207023621,
+                0.25373291969299316
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476577758789062,
+                0.25234222412109375
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.9244639873504639,
+                0.07553591579198837
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.18483470380306244,
+                0.8151652216911316
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475880980491638,
+                0.25241196155548096
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7473546862602234,
+                0.25264525413513184
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9544228315353394,
+                0.045577190816402435
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7750915288925171,
+                0.22490842640399933
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.715753972530365,
+                0.2842459976673126
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.4685526490211487,
+                0.5314474105834961
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.749812126159668,
+                0.25018787384033203
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9710791707038879,
+                0.028920866549015045
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7810705304145813,
+                0.21892952919006348
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7901365160942078,
+                0.20986346900463104
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9753672480583191,
+                0.024632727727293968
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9963811635971069,
+                0.0036189493257552385
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7395391464233398,
+                0.26046088337898254
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9995714426040649,
+                0.00042846010182984173
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.1956569403409958,
+                0.8043431043624878
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7851920127868652,
+                0.21480801701545715
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.907957136631012,
+                0.09204281866550446
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8817834854125977,
+                0.11821643263101578
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8011727929115295,
+                0.1988271176815033
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.41873490810394287,
+                0.5812650918960571
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9049407243728638,
+                0.09505921602249146
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9967244863510132,
+                0.0032754370477050543
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.79896479845047,
+                0.20103515684604645
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8784641623497009,
+                0.12153580784797668
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.584270715713501,
+                0.415729284286499
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.754192054271698,
+                0.24580790102481842
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7515120506286621,
+                0.2484879195690155
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9983100891113281,
+                0.001689963974058628
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9817231297492981,
+                0.01827671192586422
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9166609048843384,
+                0.08333909511566162
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7509074211120605,
+                0.24909262359142303
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8102689385414124,
+                0.18973110616207123
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.910324215888977,
+                0.08967575430870056
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476456165313721,
+                0.25235438346862793
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7035730481147766,
+                0.296426922082901
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9047092795372009,
+                0.09529075771570206
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.752743124961853,
+                0.24725694954395294
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8877809643745422,
+                0.1122189611196518
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7352527379989624,
+                0.26474729180336
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9965242147445679,
+                0.0034757587127387524
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.746157705783844,
+                0.253842294216156
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7482224702835083,
+                0.2517775297164917
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7210239768028259,
+                0.27897605299949646
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8785565495491028,
+                0.12144352495670319
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9918402433395386,
+                0.008159702643752098
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9058891534805298,
+                0.09411080181598663
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.787363588809967,
+                0.21263642609119415
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.908539354801178,
+                0.09146071970462799
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7483638525009155,
+                0.2516361474990845
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9395352602005005,
+                0.06046467274427414
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.04588639736175537,
+                0.9541136026382446
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.37916940450668335,
+                0.6208305954933167
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.004167328123003244,
+                0.9958328008651733
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.4712732136249542,
+                0.5287268161773682
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0018784210551530123,
+                0.9981216192245483
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0010051141725853086,
+                0.9989948272705078
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475705742835999,
+                0.2524294853210449
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.11997999995946884,
+                0.880020022392273
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475862503051758,
+                0.2524137496948242
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8050369620323181,
+                0.19496308267116547
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.025317950174212456,
+                0.9746819734573364
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7401569485664368,
+                0.25984305143356323
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7212115526199341,
+                0.2787884473800659
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.3855406939983368,
+                0.6144593358039856
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0007238630205392838,
+                0.9992759227752686
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0012078502913936973,
+                0.9987921714782715
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0397736094892025,
+                0.9602263569831848
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476139068603516,
+                0.2523861527442932
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7575019598007202,
+                0.2424980103969574
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                2.0304432268858363e-7,
+                1
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476097345352173,
+                0.2523902356624603
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.1917937844991684,
+                0.8082062602043152
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7480018734931946,
+                0.25199803709983826
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.000018597920643514954,
+                0.9999814033508301
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7474649548530579,
+                0.25253504514694214
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.01063635852187872,
+                0.9893636703491211
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.15009726583957672,
+                0.8499027490615845
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.16996806859970093,
+                0.8300319314002991
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7488734126091003,
+                0.25112661719322205
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476038932800293,
+                0.2523960471153259
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.06831669062376022,
+                0.9316832423210144
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476670742034912,
+                0.2523329257965088
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7468620538711548,
+                0.2531379759311676
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00225007813423872,
+                0.9977499842643738
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8009666800498962,
+                0.19903334975242615
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.148672416806221,
+                0.8513275384902954
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0005745200323872268,
+                0.9994255900382996
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7488487362861633,
+                0.25115129351615906
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8030264377593994,
+                0.19697356224060059
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.01020222157239914,
+                0.9897977709770203
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7739559412002563,
+                0.22604405879974365
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7475701570510864,
+                0.25242987275123596
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.5756320357322693,
+                0.4243680238723755
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7870094776153564,
+                0.21299052238464355
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7664905190467834,
+                0.23350942134857178
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.782214343547821,
+                0.21778567135334015
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8252049684524536,
+                0.17479506134986877
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7249471545219421,
+                0.2750528156757355
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7580873370170593,
+                0.24191266298294067
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.3440607190132141,
+                0.6559392809867859
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7548797130584717,
+                0.2451203167438507
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7135524749755859,
+                0.2864474952220917
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8744730949401855,
+                0.12552693486213684
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.007183589972555637,
+                0.9928163886070251
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8019269108772278,
+                0.19807304441928864
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6366161704063416,
+                0.36338382959365845
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.741317629814148,
+                0.25868239998817444
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476956248283386,
+                0.2523043751716614
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8296425938606262,
+                0.17035748064517975
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7891275882720947,
+                0.21087241172790527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9298921227455139,
+                0.07010786235332489
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9776924848556519,
+                0.02230750396847725
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.5757362246513367,
+                0.42426377534866333
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476121187210083,
+                0.2523878812789917
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7463991641998291,
+                0.2536008954048157
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6794553995132446,
+                0.320544570684433
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7605549097061157,
+                0.23944507539272308
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7885361909866333,
+                0.2114637792110443
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8221251964569092,
+                0.17787481844425201
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7918846607208252,
+                0.20811539888381958
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8246602416038513,
+                0.17533978819847107
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9190549850463867,
+                0.08094505220651627
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9424566030502319,
+                0.057543277740478516
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6782397627830505,
+                0.32176029682159424
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.745986819267273,
+                0.2540131211280823
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8053048253059387,
+                0.19469523429870605
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7858920693397522,
+                0.2141079306602478
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.764821469783783,
+                0.23517853021621704
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7191893458366394,
+                0.2808105945587158
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.5067446231842041,
+                0.4932553470134735
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7566754221916199,
+                0.2433246225118637
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7488003373146057,
+                0.2511996328830719
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.816338837146759,
+                0.18366119265556335
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.766508936882019,
+                0.23349101841449738
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9990834593772888,
+                0.0009165105875581503
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.4491046071052551,
+                0.5508954524993896
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7846594452857971,
+                0.21534058451652527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.869495153427124,
+                0.13050474226474762
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.04223546385765076,
+                0.9577644467353821
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7729498744010925,
+                0.22705012559890747
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7965512871742249,
+                0.20344874262809753
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0582825243473053,
+                0.9417174458503723
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7444503307342529,
+                0.25554969906806946
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.739300012588501,
+                0.2607000172138214
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0008408810244873166,
+                0.9991589784622192
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7411872148513794,
+                0.258812814950943
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.04641871154308319,
+                0.9535813331604004
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7629728317260742,
+                0.2370271235704422
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0017965176375582814,
+                0.998203456401825
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7755100727081299,
+                0.22448988258838654
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.04895126447081566,
+                0.9510488510131836
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7129667401313782,
+                0.2870332598686218
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.014845418743789196,
+                0.9851545691490173
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7505174875259399,
+                0.24948245286941528
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7810215950012207,
+                0.2189784049987793
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476001381874084,
+                0.25239986181259155
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00021111147361807525,
+                0.999788761138916
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7749770879745483,
+                0.22502295672893524
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.007574853952974081,
+                0.9924252033233643
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.42026984691619873,
+                0.579730212688446
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.005002263002097607,
+                0.9949976801872253
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.4663289785385132,
+                0.5336710214614868
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476632595062256,
+                0.2523367404937744
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7479538917541504,
+                0.252046138048172
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.746078610420227,
+                0.25392135977745056
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.017007984220981598,
+                0.9829920530319214
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.1725345402956009,
+                0.8274654150009155
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0001060400900314562,
+                0.9998941421508789
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.016533376649022102,
+                0.9834665656089783
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.07076176255941391,
+                0.9292382597923279
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0031190451700240374,
+                0.9968808889389038
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.03471149504184723,
+                0.9652884602546692
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6933161616325378,
+                0.30668386816978455
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7443779110908508,
+                0.25562208890914917
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.4495110809803009,
+                0.5504888892173767
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.019534887745976448,
+                0.9804651141166687
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7427018284797668,
+                0.25729817152023315
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.21959766745567322,
+                0.7804022431373596
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7416857481002808,
+                0.2583142817020416
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.007847199216485023,
+                0.9921528697013855
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7498287558555603,
+                0.2501712143421173
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7518629431724548,
+                0.24813705682754517
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9555890560150146,
+                0.04441090673208237
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7477820515632629,
+                0.25221794843673706
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6566919684410095,
+                0.34330806136131287
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9241080284118652,
+                0.07589197903871536
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.849153459072113,
+                0.15084660053253174
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8524547815322876,
+                0.14754518866539001
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7458720207214355,
+                0.25412800908088684
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7799771428108215,
+                0.22002287209033966
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.770256519317627,
+                0.22974345088005066
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7563775777816772,
+                0.24362239241600037
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.93636155128479,
+                0.0636383518576622
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.692847728729248,
+                0.3071522116661072
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9700649380683899,
+                0.02993515133857727
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7663958072662354,
+                0.23360419273376465
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9619383811950684,
+                0.03806152567267418
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7478169202804565,
+                0.25218304991722107
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.748400092124939,
+                0.25159987807273865
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7524610161781311,
+                0.2475389540195465
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7484085559844971,
+                0.25159135460853577
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6208117008209229,
+                0.3791882395744324
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9041129350662231,
+                0.09588701277971268
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.20338685810565948,
+                0.7966131567955017
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9324268698692322,
+                0.06757310032844543
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6931782960891724,
+                0.30682173371315
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.872586190700531,
+                0.127413809299469
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7694635987281799,
+                0.2305363118648529
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7830482721328735,
+                0.2169516682624817
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8804027438163757,
+                0.11959721148014069
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9999723434448242,
+                0.00002775480243144557
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8735788464546204,
+                0.12642118334770203
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7564601898193359,
+                0.24353978037834167
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8376370668411255,
+                0.1623629629611969
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8090274333953857,
+                0.19097259640693665
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9112191796302795,
+                0.08878088742494583
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9000955820083618,
+                0.09990448504686356
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7588473558425903,
+                0.2411525994539261
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.786507785320282,
+                0.21349219977855682
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9916191697120667,
+                0.008380889892578125
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9434643983840942,
+                0.05653565376996994
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9998660087585449,
+                0.00013384909834712744
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8117536306381226,
+                0.18824633955955505
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7542489767074585,
+                0.24575094878673553
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.09127925336360931,
+                0.9087207317352295
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8855339288711548,
+                0.114466093480587
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7947421073913574,
+                0.2052578628063202
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9184395670890808,
+                0.08156050741672516
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8363041281700134,
+                0.16369590163230896
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.747584342956543,
+                0.25241562724113464
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7395626902580261,
+                0.2604372799396515
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7473504543304443,
+                0.25264960527420044
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7180741429328918,
+                0.28192582726478577
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7626856565475464,
+                0.23731432855129242
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7051388621330261,
+                0.2948610484600067
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7490167021751404,
+                0.25098326802253723
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.01739029958844185,
+                0.9826096892356873
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.13516521453857422,
+                0.8648348450660706
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7474413514137268,
+                0.2525586485862732
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7479852437973022,
+                0.25201475620269775
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7997706532478333,
+                0.20022934675216675
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7439402341842651,
+                0.25605979561805725
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0003874330432154238,
+                0.9996123909950256
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8562039732933044,
+                0.14379596710205078
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.04009516164660454,
+                0.9599047303199768
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.012390617281198502,
+                0.987609326839447
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7529644966125488,
+                0.24703551828861237
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8373903036117554,
+                0.1626097559928894
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.4225732684135437,
+                0.5774267315864563
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.049208227545022964,
+                0.9507918357849121
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.040366582572460175,
+                0.959633469581604
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7494969367980957,
+                0.2505030930042267
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.2047407627105713,
+                0.7952592968940735
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0002455420617479831,
+                0.9997544884681702
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6325651407241821,
+                0.36743485927581787
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475498914718628,
+                0.2524501085281372
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.012810561805963516,
+                0.9871895909309387
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00858023390173912,
+                0.9914198517799377
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7586642503738403,
+                0.2413356751203537
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7567821145057678,
+                0.24321788549423218
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7480069398880005,
+                0.2519931197166443
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.09864867478609085,
+                0.9013513326644897
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0004140791133977473,
+                0.9995856881141663
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.2805682122707367,
+                0.7194318175315857
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476269602775574,
+                0.2523730397224426
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.007190002128481865,
+                0.9928100109100342
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476367354393005,
+                0.25236329436302185
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.16419492661952972,
+                0.8358050584793091
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7578696608543396,
+                0.2421303242444992
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.001123974216170609,
+                0.9988760352134705
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.001982963876798749,
+                0.9980171322822571
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.020823629572987556,
+                0.9791763424873352
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7553938627243042,
+                0.2446061670780182
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7500271797180176,
+                0.24997279047966003
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.003758329199627042,
+                0.9962417483329773
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7842963337898254,
+                0.21570372581481934
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.763536810874939,
+                0.23646312952041626
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8339167833328247,
+                0.1660832017660141
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9566824436187744,
+                0.04331759363412857
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7439809441566467,
+                0.25601908564567566
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7472221255302429,
+                0.25277793407440186
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.3949901759624481,
+                0.6050098538398743
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7513689994812012,
+                0.24863097071647644
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7695270776748657,
+                0.23047292232513428
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7907429933547974,
+                0.20925696194171906
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9710803031921387,
+                0.02891966700553894
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7599915266036987,
+                0.24000845849514008
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7390792965888977,
+                0.2609207034111023
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7876332402229309,
+                0.21236680448055267
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.819633960723877,
+                0.18036597967147827
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9104965925216675,
+                0.08950342237949371
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9567343592643738,
+                0.04326562583446503
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7478674650192261,
+                0.25213250517845154
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8730558753013611,
+                0.12694409489631653
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8123920559883118,
+                0.18760797381401062
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9491866827011108,
+                0.05081333965063095
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7920330762863159,
+                0.2079668939113617
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9674641489982605,
+                0.03253588452935219
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.773408830165863,
+                0.22659115493297577
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9098781943321228,
+                0.09012174606323242
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8491442799568176,
+                0.15085574984550476
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7537918090820312,
+                0.24620814621448517
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9899528622627258,
+                0.01004713587462902
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.913577675819397,
+                0.08642236888408661
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7806236743927002,
+                0.2193763107061386
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7661693096160889,
+                0.2338307648897171
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7463684678077698,
+                0.25363144278526306
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8467590808868408,
+                0.15324090421199799
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9010189771652222,
+                0.09898102283477783
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.965590238571167,
+                0.034409668296575546
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.70870441198349,
+                0.29129558801651
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9680242538452148,
+                0.031975723803043365
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.690175473690033,
+                0.3098245859146118
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7618080377578735,
+                0.23819191753864288
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8029010891914368,
+                0.19709892570972443
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.944290041923523,
+                0.055709999054670334
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8372557759284973,
+                0.1627441644668579
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8626136779785156,
+                0.13738630712032318
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7482380867004395,
+                0.25176188349723816
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7766534090042114,
+                0.22334662079811096
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8483770489692688,
+                0.15162290632724762
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9065566658973694,
+                0.09344334900379181
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.768226146697998,
+                0.23177392780780792
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7485939860343933,
+                0.2514059543609619
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9388524889945984,
+                0.06114745885133743
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7344825267791748,
+                0.2655174732208252
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.023829909041523933,
+                0.9761701226234436
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.000025020628527272493,
+                0.9999752044677734
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7534624934196472,
+                0.24653753638267517
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8243414163589478,
+                0.17565861344337463
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.08079613000154495,
+                0.9192038774490356
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.04471868276596069,
+                0.9552813172340393
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.742477536201477,
+                0.2575225532054901
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7500342726707458,
+                0.24996572732925415
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00030587712535634637,
+                0.9996939301490784
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7763544917106628,
+                0.22364547848701477
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7554674744606018,
+                0.24453258514404297
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475760579109192,
+                0.25242388248443604
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476131916046143,
+                0.25238683819770813
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8345038890838623,
+                0.1654960662126541
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.1440379023551941,
+                0.8559620380401611
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.43111690878868103,
+                0.5688831210136414
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.750869631767273,
+                0.24913036823272705
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7486546635627747,
+                0.25134536623954773
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7471187710762024,
+                0.2528812289237976
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476709485054016,
+                0.2523289918899536
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7355905175209045,
+                0.26440948247909546
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7479948997497559,
+                0.25200510025024414
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7474580407142639,
+                0.25254198908805847
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475603818893433,
+                0.2524396479129791
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6697015762329102,
+                0.33029842376708984
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.3678288757801056,
+                0.632171094417572
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.19901762902736664,
+                0.8009823560714722
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6540170907974243,
+                0.3459828794002533
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476049065589905,
+                0.2523951828479767
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.75790935754776,
+                0.24209052324295044
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.18672361969947815,
+                0.8132764101028442
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.014252818189561367,
+                0.9857470989227295
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8572815656661987,
+                0.14271840453147888
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7759732604026794,
+                0.22402675449848175
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.9936546683311462,
+                0.0063453782349824905
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.747542679309845,
+                0.25245729088783264
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6809760928153992,
+                0.31902390718460083
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.9142749309539795,
+                0.0857250913977623
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7583333849906921,
+                0.24166668951511383
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.01608775556087494,
+                0.9839124083518982
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.747246503829956,
+                0.25275349617004395
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7763382196426392,
+                0.22366170585155487
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.4005516469478607,
+                0.5994482636451721
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476078271865845,
+                0.2523922622203827
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7415714859962463,
+                0.2584284842014313
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.1370905041694641,
+                0.8629094958305359
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8025152683258057,
+                0.19748474657535553
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.13489489257335663,
+                0.8651050925254822
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.16500116884708405,
+                0.8349988460540771
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9846374988555908,
+                0.015362532809376717
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.754162609577179,
+                0.24583739042282104
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7672752141952515,
+                0.23272480070590973
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9993138313293457,
+                0.0006860858993604779
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7424635291099548,
+                0.25753650069236755
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7447675466537476,
+                0.25523248314857483
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7414523363113403,
+                0.25854772329330444
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9029507637023926,
+                0.09704931825399399
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8557831048965454,
+                0.144216850399971
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.871090829372406,
+                0.12890921533107758
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7771756052970886,
+                0.22282437980175018
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8817146420478821,
+                0.11828533560037613
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7061073780059814,
+                0.29389265179634094
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8112372756004333,
+                0.18876267969608307
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.19992394745349884,
+                0.8000760674476624
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8114233613014221,
+                0.18857663869857788
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9665542840957642,
+                0.033445682376623154
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6138594150543213,
+                0.3861405849456787
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7478424906730652,
+                0.25215744972229004
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7496445178985596,
+                0.25035539269447327
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7853301763534546,
+                0.2146698534488678
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7864091992378235,
+                0.2135908454656601
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7501106262207031,
+                0.2498893439769745
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.837851881980896,
+                0.16214819252490997
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.754402220249176,
+                0.24559777975082397
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8867127895355225,
+                0.11328718066215515
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9576551914215088,
+                0.042344771325588226
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7493680119514465,
+                0.25063207745552063
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6484780311584473,
+                0.35152193903923035
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7490745186805725,
+                0.2509255111217499
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7787520289421082,
+                0.22124800086021423
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.784659206867218,
+                0.21534083783626556
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7733763456344604,
+                0.22662368416786194
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8151127099990845,
+                0.18488721549510956
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476253509521484,
+                0.2523745596408844
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7879780530929565,
+                0.21202190220355988
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9999890327453613,
+                0.000011089418876508716
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8388306498527527,
+                0.16116933524608612
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.744791567325592,
+                0.2552083730697632
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9993671774864197,
+                0.0006327473092824221
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8398227691650391,
+                0.16017724573612213
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7853678464889526,
+                0.21463221311569214
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7377532124519348,
+                0.2622467875480652
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.6818076372146606,
+                0.31819236278533936
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7549182772636414,
+                0.24508178234100342
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.9895151257514954,
+                0.010484918020665646
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.8294731974601746,
+                0.1705268770456314
+            ]
+        },
+        {
+            "trueLabel": "Melanoma",
+            "probabilities": [
+                0.995099663734436,
+                0.004900422878563404
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.763655960559845,
+                0.23634400963783264
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476240396499634,
+                0.25237590074539185
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.15218248963356018,
+                0.8478174805641174
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.09261912852525711,
+                0.9073808789253235
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6620787978172302,
+                0.33792123198509216
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.10826675593852997,
+                0.8917332291603088
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7503560781478882,
+                0.24964390695095062
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0043723732233047485,
+                0.9956277012825012
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.45770058035850525,
+                0.5422993898391724
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.09752967953681946,
+                0.9024703502655029
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0006774541107006371,
+                0.9993226528167725
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7479979991912842,
+                0.2520020008087158
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.5232430696487427,
+                0.4767569601535797
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7468182444572449,
+                0.25318169593811035
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0012966408394277096,
+                0.9987033605575562
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7678061723709106,
+                0.23219385743141174
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7881224155426025,
+                0.21187758445739746
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7633510231971741,
+                0.23664894700050354
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6728261113166809,
+                0.3271738886833191
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.20157159864902496,
+                0.7984284162521362
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8136049509048462,
+                0.186395063996315
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7474827170372009,
+                0.2525172233581543
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7372115254402161,
+                0.26278841495513916
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.25238892436027527
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.42342472076416016,
+                0.5765753388404846
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475999593734741,
+                0.2524000108242035
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476211190223694,
+                0.2523788809776306
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.027659514918923378,
+                0.9723405241966248
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.00142638327088207,
+                0.9985736012458801
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7914944291114807,
+                0.2085055112838745
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7505657076835632,
+                0.24943433701992035
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.2941170334815979,
+                0.7058830261230469
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8339809775352478,
+                0.166019007563591
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7476111054420471,
+                0.2523888349533081
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.8183532953262329,
+                0.18164673447608948
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.02127171866595745,
+                0.978728175163269
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.29711708426475525,
+                0.7028828859329224
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.5090124607086182,
+                0.4909875988960266
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.9881769418716431,
+                0.011823086068034172
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.33768317103385925,
+                0.6623167991638184
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.767863929271698,
+                0.23213601112365723
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.7475907802581787,
+                0.25240930914878845
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.0030950824730098248,
+                0.9969049096107483
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.9883781671524048,
+                0.011621755547821522
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.3854445517063141,
+                0.6145554780960083
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.707375168800354,
+                0.2926248610019684
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6245359182357788,
+                0.37546414136886597
+            ]
+        },
+        {
+            "trueLabel": "Nevus",
+            "probabilities": [
+                0.6405642032623291,
+                0.3594357967376709
+            ]
+        }
+    ]
+}

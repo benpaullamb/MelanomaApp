@@ -7,6 +7,7 @@ export default class MatTextField extends Component {
 
     constructor(props) {
         super(props);
+        // Displays the given text or '' if none is supplied
         this.state = {
             text: props.text || ''
         };
@@ -14,6 +15,7 @@ export default class MatTextField extends Component {
 
     render() {
         return (
+            // Wrapped in a styled input component
             <MatInput label={this.props.label} required={this.props.required} style={this.props.style}>
                 <TextInput value={this.state.text} onChangeText={text => this.onChangeText(text)}
                     placeholder={this.props.placeholder} placeholderTextColor="lightgray" style={style.input} />
@@ -22,6 +24,7 @@ export default class MatTextField extends Component {
         );
     }
 
+    // Calls any supplied listener when changed
     onChangeText(text) {
         this.setState({ text });
         if (this.props.onChangeText) this.props.onChangeText(text);
