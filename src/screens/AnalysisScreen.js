@@ -150,9 +150,15 @@ const style = StyleSheet.create({
     },
 
     moleImage: {
+        // Null lets the image fill the available width
         width: null,
         height: 200,
         marginBottom: 16
+    },
+
+    // Uses flex box
+    footer: {
+        alignItems: 'flex-end'
     },
 
     goodAIPrediction: {
@@ -172,10 +178,5 @@ const style = StyleSheet.create({
 
     input: {
         marginBottom: 8
-    },
-
-    // Uses flex box
-    footer: {
-        alignItems: 'flex-end'
     }
 });

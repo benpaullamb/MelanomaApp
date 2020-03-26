@@ -5,9 +5,9 @@ const csvParse = require('csv-parse');
 // Used to extract all melanoma images and an equal number of benign images
 // From the ISIC Archive into a separate folder for ease of use
 (async function () {
-    // const imageNames = await getImageNames('nevus', 0, 2168);
-    // const imagePaths = await getImagePaths(imageNames);
-    // moveFiles(imagePaths, './ISIC/Nevus');
+    const imageNames = await getImageNames('nevus', 0, 2168);
+    const imagePaths = await getImagePaths(imageNames);
+    moveFiles(imagePaths, './ISIC/Nevus');
 })();
 
 function getFolderSize(dir) {

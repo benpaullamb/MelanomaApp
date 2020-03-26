@@ -3,7 +3,7 @@ const tfn = require('@tensorflow/tfjs-node');
 const fs = require('fs');
 
 // Computes and displays metrics from the evaluation
-(function evaluateSaved() {
+function evaluateSaved() {
     // Takes the results of the actual evaluation stored in JSON
     const evalResJSON = fs.readFileSync('./TensorFlow/eval.json', 'utf8');
     const evalRes = JSON.parse(evalResJSON);
@@ -11,6 +11,26 @@ const fs = require('fs');
     const metrics = computeMetrics(evalRes.results, 0.74763); // 0.74763
     // Displays them
     printMetrics(metrics);
+}
+
+(function evalAUC() {
+    const evalResJSON = fs.readFileSync('./TensorFlow/eval.json', 'utf8');
+    const evalRes = JSON.parse(evalResJSON);
+
+    let csv = "";
+    // Generate a table of points with an increasing threshold value
+    for (let threshold = 0; threshold <= 1; threshold += 0.01) {
+
+        // Compute the TPR and FPR using the confusion matrix values
+        const confusionMatrix = computeMetrics(evalRes.results, threshold).counts;
+        const tpr = confusionMatrix.tp / (confusionMatrix.tp + confusionMatrix.fn);
+        const fpr = 1 - (confusionMatrix.tn / (confusionMatrix.tn + confusionMatrix.fp));
+
+        // Save them in a CSV
+        csv += `${threshold},${tpr},${fpr}\n`;
+    }
+
+    fs.writeFileSync('./TensorFlow/auc.txt', csv);
 })();
 
 function printMetrics(metrics) {
