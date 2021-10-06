@@ -2,7 +2,7 @@
 
 ![status: completed](https://img.shields.io/badge/status-completed-success)
 
-See _Dissertation.pdf_ for the full write-up.
+See **Dissertation.pdf** for the full write-up.
 
 ## Built with
 
